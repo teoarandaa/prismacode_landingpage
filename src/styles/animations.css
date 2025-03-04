@@ -45,4 +45,13 @@
     100% {
         background-position: 0% 50%;
     }
-} */ 
+} */
+
+/* Añadir esta regla para asegurarnos de que las animaciones no interfieran con el hover */
+.benefit-card[data-aos].aos-animate {
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.benefit-card[data-aos].aos-animate:hover {
+    transform: translateY(-5px) !important;
+} 

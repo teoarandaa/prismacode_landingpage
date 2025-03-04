@@ -1,0 +1,19 @@
+{
+    "projects": [
+        {
+            "title": "App de Delivery",
+            "description": "Aplicación móvil multiplataforma desarrollada en Flutter para servicio de entrega a domicilio",
+            "image": "images/delivery-app.jpg"
+        },
+        {
+            "title": "Gestión de Clínicas",
+            "description": "Sistema web completo en Laravel para la gestión de citas y pacientes",
+            "image": "images/clinic-system.jpg"
+        },
+        {
+            "title": "App Bancaria",
+            "description": "Aplicación nativa iOS/Android para servicios financieros",
+            "image": "images/banking-app.jpg"
+        }
+    ]
+} 

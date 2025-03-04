@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prisma - Desarrollo Software a Medida</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">PRISMA</div>
+        <div class="nav-links">
+            <a href="#home">Inicio</a>
+            <a href="#projects">Proyectos</a>
+            <a href="#contact" class="contact-btn">Contactar</a>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 data-aos="fade-up">Transformamos Ideas en Soluciones Digitales</h1>
+            <p data-aos="fade-up" data-aos-delay="200">Desarrollo de software personalizado para impulsar tu negocio</p>
+            <button class="cta-button" data-aos="fade-up" data-aos-delay="400">
+                Comienza tu proyecto
+            </button>
+        </div>
+        <div class="hero-background"></div>
+    </section>
+
+    <section id="benefits" class="benefits">
+        <h2 data-aos="fade-up">¿Por qué digitalizar tu empresa?</h2>
+        <div class="benefits-grid">
+            <div class="benefit-card" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-chart-line"></i>
+                <h3>Mayor Eficiencia</h3>
+                <p>Automatiza procesos repetitivos y reduce errores humanos, permitiendo que tu equipo se enfoque en tareas de mayor valor.</p>
+            </div>
+            <div class="benefit-card" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-globe"></i>
+                <h3>Alcance Global</h3>
+                <p>Expande tu negocio más allá de las fronteras físicas y llega a clientes en cualquier parte del mundo.</p>
+            </div>
+            <div class="benefit-card" data-aos="fade-up" data-aos-delay="300">
+                <i class="fas fa-users"></i>
+                <h3>Mejor Experiencia Cliente</h3>
+                <p>Ofrece servicios 24/7 y mejora la satisfacción de tus clientes con soluciones digitales intuitivas.</p>
+            </div>
+            <div class="benefit-card" data-aos="fade-up" data-aos-delay="400">
+                <i class="fas fa-database"></i>
+                <h3>Datos Inteligentes</h3>
+                <p>Toma decisiones informadas basadas en datos reales y análisis precisos de tu negocio.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="approach" class="approach">
+        <div class="approach-content">
+            <h2 data-aos="fade-up">Nuestro Enfoque</h2>
+            <div class="approach-grid">
+                <div class="approach-card" data-aos="fade-right">
+                    <h3>Costes Competitivos</h3>
+                    <p>Optimizamos recursos y procesos para ofrecerte soluciones de alta calidad a precios accesibles. Sin costes ocultos, solo transparencia total.</p>
+                </div>
+                <div class="approach-card" data-aos="fade-left">
+                    <h3>Desarrollo Ágil</h3>
+                    <p>Metodología ágil que garantiza resultados rápidos y adaptables a tus necesidades. De la idea al producto en tiempo récord.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2 data-aos="fade-up">Nuestros Proyectos</h2>
+        <div class="projects-grid" id="projectsContainer">
+            <!-- Projects will be loaded here dynamically -->
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="contact-content" data-aos="fade-up">
+            <h2>¿Listo para transformar tu negocio?</h2>
+            <p>Cuéntanos tu proyecto y construyamos juntos el futuro digital de tu empresa</p>
+            <a href="mailto:helpteam.prisma@gmail.com?subject=Consulta%20sobre%20proyecto%20digital&body=Hola%20equipo%20de%20Prisma%2C%0A%0AMe%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios.%0A%0ATipo%20de%20proyecto%3A%0APresupuesto%20estimado%3A%0APlazos%20deseados%3A%0A%0A¡Gracias!" 
+               class="contact-btn" data-aos="fade-up" data-aos-delay="200">
+                Hablemos
+            </a>
+        </div>
+    </section>
+
+    <section id="technologies" class="technologies">
+        <h2 data-aos="fade-up">Tecnologías que Utilizamos</h2>
+        <div class="tech-grid">
+            <div class="tech-card" data-aos="fade-up" data-aos-delay="100">
+                <i class="fab fa-html5"></i>
+                <h3>HTML5</h3>
+                <div class="tooltip">
+                    <h4>HTML5</h4>
+                    <p>Lenguaje estándar para estructurar y presentar contenido web. Utilizamos las últimas características para crear sitios web modernos y semánticos.</p>
+                </div>
+            </div>
+            <div class="tech-card" data-aos="fade-up" data-aos-delay="200">
+                <i class="fab fa-css3-alt"></i>
+                <h3>CSS3</h3>
+                <div class="tooltip">
+                    <h4>CSS3</h4>
+                    <p>Lenguaje de estilos que nos permite crear interfaces modernas y responsivas, con animaciones fluidas y diseños adaptables.</p>
+                </div>
+            </div>
+            <div class="tech-card" data-aos="fade-up" data-aos-delay="300">
+                <i class="fab fa-js"></i>
+                <h3>JavaScript</h3>
+                <div class="tooltip">
+                    <h4>JavaScript</h4>
+                    <p>Lenguaje de programación versátil que permite crear experiencias web interactivas y dinámicas del lado del cliente.</p>
+                </div>
+            </div>
+            <div class="tech-card" data-aos="fade-up" data-aos-delay="400">
+                <i class="fab fa-laravel"></i>
+                <h3>Laravel</h3>
+                <div class="tooltip">
+                    <h4>Laravel</h4>
+                    <p>Framework PHP robusto para desarrollo backend, permitiendo crear APIs seguras y aplicaciones web escalables.</p>
+                </div>
+            </div>
+            <div class="tech-card" data-aos="fade-up" data-aos-delay="500">
+                <svg class="flutter-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                    <path d="M429.5 236.3L291.7 374.1 429.5 512H272l-59.1-59.1-78.8-78.8L272 236.3H429.5zM272 0L16 256l78.8 78.8L429.5 0H272z"/>
+                </svg>
+                <h3>Flutter</h3>
+                <div class="tooltip">
+                    <h4>Flutter</h4>
+                    <p>Framework de Google para desarrollo multiplataforma, permitiendo crear aplicaciones nativas para iOS y Android con un único código base.</p>
+                </div>
+            </div>
+            <div class="tech-card" data-aos="fade-up" data-aos-delay="600">
+                <i class="fab fa-android"></i>
+                <h3>Kotlin</h3>
+                <div class="tooltip">
+                    <h4>Kotlin</h4>
+                    <p>Lenguaje moderno para desarrollo Android, ofreciendo seguridad de tipos y características avanzadas para crear apps nativas.</p>
+                </div>
+            </div>
+            <div class="tech-card" data-aos="fade-up" data-aos-delay="700">
+                <i class="fab fa-apple"></i>
+                <h3>Swift</h3>
+                <div class="tooltip">
+                    <h4>Swift</h4>
+                    <p>Lenguaje potente y intuitivo para desarrollo iOS, permitiendo crear aplicaciones nativas de alto rendimiento para el ecosistema Apple.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">PRISMA</div>
+            <div class="footer-links">
+                <a href="#home">Inicio</a>
+                <a href="#projects">Proyectos</a>
+                <a href="#contact">Contacto</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/projects.js"></script>
+</body>
+</html> 

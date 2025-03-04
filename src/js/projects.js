@@ -42,6 +42,9 @@ class ProjectManager {
             return;
         }
         
+        // Usar un contador para los retrasos de AOS
+        let delayCounter = 0;
+        
         projects.forEach(project => {
             const tags = project.tags.map(tag => `<span class="project-tag">${tag}</span>`).join('');
             
@@ -51,7 +54,11 @@ class ProjectManager {
             const projectCard = document.createElement('div');
             projectCard.className = 'project-card';
             projectCard.setAttribute('data-categories', project.categories);
+            
+            // Usar AOS con retrasos escalonados
             projectCard.setAttribute('data-aos', 'fade-up');
+            projectCard.setAttribute('data-aos-delay', (delayCounter * 100).toString());
+            delayCounter++;
             
             projectCard.innerHTML = `
                 <div class="project-image">
@@ -78,6 +85,11 @@ class ProjectManager {
             
             this.projectsContainer.appendChild(projectCard);
         });
+        
+        // Refrescar AOS después de añadir nuevos elementos
+        setTimeout(() => {
+            AOS.refresh();
+        }, 100);
     }
 
     filterProjects(filter) {
@@ -101,11 +113,13 @@ class ProjectManager {
 
 // Inicializar el gestor de proyectos cuando se carga el documento
 document.addEventListener('DOMContentLoaded', function() {
-    // Inicializar AOS
+    // Inicializar AOS con configuración optimizada
     AOS.init({
         duration: 800,
         easing: 'ease-in-out',
-        once: true
+        once: true,
+        mirror: false,
+        disable: false
     });
     
     // Inicializar el gestor de proyectos
@@ -136,29 +150,15 @@ function setupFilters(projectManager) {
     });
 }
 
-// Archivo específico para la página de proyectos
+// Configurar las tech-cards
 document.addEventListener('DOMContentLoaded', function() {
-    console.log("DOM fully loaded");
-    
-    // Inicializar AOS
-    AOS.init({
-        duration: 800,
-        easing: 'ease-in-out',
-        once: true
-    });
-    
-    // Configurar los filtros de proyectos
-    setupFilters();
-    
     // IMPORTANTE: Asegurarse de que las tech-cards existen antes de añadir event listeners
     const techCards = document.querySelectorAll('.tech-card');
-    console.log("Tech cards found:", techCards.length);
     
     if (techCards.length > 0) {
         // Añadir event listeners a todas las tech-cards
         techCards.forEach(card => {
             card.addEventListener('click', function(e) {
-                console.log("Tech card clicked");
                 // Cerrar cualquier otra card activa
                 document.querySelectorAll('.tech-card.active').forEach(activeCard => {
                     if (activeCard !== this) {
@@ -184,13 +184,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             }
         });
-        
-        // Crear overlay para el fondo si no existe
-        if (!document.querySelector('.overlay')) {
-            const overlay = document.createElement('div');
-            overlay.className = 'overlay';
-            document.body.appendChild(overlay);
-        }
     }
 });
 

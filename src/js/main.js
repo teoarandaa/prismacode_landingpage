@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
         duration: 1000,
         once: true,
         offset: 100,
-        disable: true // Desactivamos AOS para usar nuestras propias animaciones
+        disable: false // Habilitamos AOS para usar sus animaciones
     });
 
     // Smooth scroll para los enlaces de navegación
@@ -169,9 +169,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Función para activar las animaciones cuando los elementos son visibles
     function checkVisibility() {
+        // Eliminamos la verificación para benefitsSection para evitar la doble animación
         const approachSection = document.querySelector('.approach');
-        const benefitsSection = document.querySelector('.benefits');
-        const projectsSection = document.querySelector('.projects'); // Añadimos la sección de proyectos
+        const projectsSection = document.querySelector('.projects');
+        const pricingSection = document.querySelector('.pricing');
         
         if (approachSection) {
             const rect = approachSection.getBoundingClientRect();
@@ -182,22 +183,21 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
         
-        if (benefitsSection) {
-            const rect = benefitsSection.getBoundingClientRect();
-            if (rect.top < window.innerHeight - 100 && rect.bottom >= 0) {
-                benefitsSection.classList.add('animate');
-            } else {
-                benefitsSection.classList.remove('animate');
-            }
-        }
-        
-        // Añadimos la verificación para la sección de proyectos
         if (projectsSection) {
             const rect = projectsSection.getBoundingClientRect();
             if (rect.top < window.innerHeight - 100 && rect.bottom >= 0) {
                 projectsSection.classList.add('animate');
             } else {
                 projectsSection.classList.remove('animate');
+            }
+        }
+        
+        if (pricingSection) {
+            const rect = pricingSection.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 100 && rect.bottom >= 0) {
+                pricingSection.classList.add('animate');
+            } else {
+                pricingSection.classList.remove('animate');
             }
         }
     }
@@ -209,7 +209,9 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(checkVisibility, 100);
     
     // Cargar los proyectos
-    loadProjects();
+    if (typeof loadProjects === 'function') {
+        loadProjects();
+    }
 });
 
 // Función para cargar los proyectos en un carrusel

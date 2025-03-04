@@ -26,7 +26,10 @@
 }
 
 .project-card {
-    animation: fadeInUp 0.6s ease-out;
+    /* Eliminar la animación y la opacidad inicial */
+    opacity: 1;
+    animation: none;
+    will-change: auto;
 }
 
 /* Eliminamos la animación del hero-background y su keyframe */
@@ -103,24 +106,13 @@
 }
 
 /* Animaciones para project-card */
-.projects.animate .project-card:nth-child(1) {
-    animation: fadeInRight 0.6s ease-out forwards;
-    animation-delay: 0.1s;
-}
-
-.projects.animate .project-card:nth-child(2) {
-    animation: fadeInRight 0.6s ease-out forwards;
-    animation-delay: 0.3s;
-}
-
-.projects.animate .project-card:nth-child(3) {
-    animation: fadeInRight 0.6s ease-out forwards;
-    animation-delay: 0.5s;
-}
-
+.projects.animate .project-card:nth-child(1),
+.projects.animate .project-card:nth-child(2),
+.projects.animate .project-card:nth-child(3),
 .projects.animate .project-card:nth-child(4) {
-    animation: fadeInRight 0.6s ease-out forwards;
-    animation-delay: 0.7s;
+    animation: none;
+    animation-delay: 0s;
+    opacity: 1;
 }
 
 /* Aseguramos que las animaciones no interfieran con el hover */
@@ -129,4 +121,14 @@
 .project-card:hover {
     transform: translateY(-5px) !important;
     transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+/* Animaciones para las tarjetas de precios */
+.pricing-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(99, 102, 241, 0.15);
 } 

@@ -5,42 +5,48 @@
             "description": "Aplicación móvil multiplataforma desarrollada en Flutter para servicio de entrega a domicilio con seguimiento en tiempo real y pagos integrados.",
             "image": "assets/projects/delivery-app.jpg",
             "categories": "app,design",
-            "tags": ["Aplicación Móvil", "Diseño UX/UI"]
+            "tags": ["Aplicación Móvil", "Diseño UX/UI"],
+            "url": "https://example.com/delivery-app"
         },
         {
             "title": "Gestión de Clínicas",
             "description": "Sistema web completo en Laravel para la gestión de citas, pacientes, historiales médicos y facturación para clínicas y consultorios.",
             "image": "assets/projects/clinic-system.jpg",
             "categories": "web,design",
-            "tags": ["Desarrollo Web", "Diseño UX/UI"]
+            "tags": ["Desarrollo Web", "Diseño UX/UI"],
+            "url": "https://example.com/clinic-system"
         },
         {
             "title": "App Bancaria",
             "description": "Aplicación nativa iOS/Android para servicios financieros con autenticación biométrica, transferencias y gestión de inversiones.",
             "image": "assets/projects/banking-app.jpg",
             "categories": "app,design",
-            "tags": ["Aplicación Móvil", "Diseño UX/UI"]
+            "tags": ["Aplicación Móvil", "Diseño UX/UI"],
+            "url": "https://example.com/banking-app"
         },
         {
             "title": "E-commerce de Moda",
             "description": "Tienda online completa desarrollada en Shopify con pasarela de pagos, gestión de inventario y programa de fidelización.",
             "image": "assets/projects/fashion-ecommerce.jpg",
             "categories": "web,ecommerce",
-            "tags": ["E-commerce", "Desarrollo Web"]
+            "tags": ["E-commerce", "Desarrollo Web"],
+            "url": "https://example.com/fashion-ecommerce"
         },
         {
             "title": "Dashboard Analítico",
             "description": "Panel de control para visualización de datos empresariales con gráficos interactivos, reportes personalizados y alertas automáticas.",
             "image": "assets/projects/dashboard.jpg",
             "categories": "web,design",
-            "tags": ["Desarrollo Web", "Diseño UX/UI"]
+            "tags": ["Desarrollo Web", "Diseño UX/UI"],
+            "url": "https://example.com/dashboard"
         },
         {
             "title": "Plataforma Educativa",
             "description": "Sistema LMS (Learning Management System) con cursos online, evaluaciones, certificaciones y seguimiento de progreso.",
             "image": "assets/projects/education-platform.jpg",
             "categories": "web,design",
-            "tags": ["Desarrollo Web", "Diseño UX/UI"]
+            "tags": ["Desarrollo Web", "Diseño UX/UI"],
+            "url": "https://example.com/education-platform"
         }
     ]
 } 

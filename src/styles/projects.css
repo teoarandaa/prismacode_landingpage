@@ -9,7 +9,7 @@
 /* Projects section */
 .projects {
     padding: 6rem 2rem;
-    background-color: var(--background-color);
+    background-color: white;
 }
 
 .projects h2 {
@@ -83,8 +83,8 @@
     background-color: white;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -92,42 +92,81 @@
 
 .project-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 15px 35px rgba(99, 102, 241, 0.15);
 }
 
-.project-img {
-    height: 220px;
+.project-image {
+    position: relative;
     overflow: hidden;
+    height: 220px;
 }
 
-.project-img img {
+.project-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s ease;
 }
 
-.project-card:hover .project-img img {
+.project-card:hover .project-image img {
     transform: scale(1.05);
 }
 
-.project-info {
-    padding: 2rem;
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(99, 102, 241, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-link {
+    background: white;
+    color: var(--primary-color);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.project-card:hover .project-link {
+    transform: translateY(0);
+}
+
+.project-content {
+    padding: 1.5rem;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
 }
 
-.project-info h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+.project-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
     color: var(--text-color);
+    font-weight: 600;
 }
 
-.project-info p {
+.project-content p {
     color: #64748b;
+    margin-bottom: 1.2rem;
     line-height: 1.6;
-    margin-bottom: 1.5rem;
     flex-grow: 1;
 }
 
@@ -135,34 +174,84 @@
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.2rem;
 }
 
 .project-tag {
-    background-color: #f1f5f9;
+    background: #f1f5f9;
     color: var(--primary-color);
     padding: 0.4rem 0.8rem;
-    border-radius: 20px;
+    border-radius: 30px;
     font-size: 0.85rem;
     font-weight: 500;
 }
 
+.project-actions {
+    margin-top: auto;
+}
+
 .project-cta {
     display: inline-block;
-    background-color: var(--primary-color);
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: white;
     padding: 0.8rem 1.5rem;
     border-radius: 30px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 500;
     transition: all 0.3s ease;
     text-align: center;
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
 }
 
 .project-cta:hover {
-    background-color: var(--secondary-color);
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(99, 102, 241, 0.3);
+    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.4);
+}
+
+.no-projects {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 3rem;
+    background: #f8fafc;
+    border-radius: 12px;
+    color: #64748b;
+}
+
+/* Animación para las tarjetas */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.project-card {
+    animation: fadeInUp 0.5s ease forwards;
+    opacity: 0;
+}
+
+.project-card:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.project-card:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.project-card:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.project-card:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+.project-card:nth-child(6) {
+    animation-delay: 0.5s;
 }
 
 /* Estilos para las tech-cards */
@@ -324,4 +413,33 @@
     .section-subtitle {
         font-size: 1rem;
     }
+}
+
+/* Actualizar el color de fondo para la sección de proyectos destacados */
+.projects-section {
+    background-color: #f8f9fa; /* Mismo color que las otras secciones */
+    padding: 6rem 2rem;
+}
+
+/* Mantener consistente el color de fondo para todas las secciones principales */
+.projects, .technologies, .projects-section {
+    background-color: #f8f9fa;
+    padding: 6rem 2rem;
+}
+
+/* Eliminar cualquier degradado y establecer un color de fondo sólido para todas las secciones */
+.projects-section, 
+.projects, 
+.technologies {
+    background-color: #f8f9fa !important; /* Usar !important para anular cualquier otro estilo */
+    padding: 6rem 2rem;
+    background-image: none !important; /* Eliminar cualquier imagen de fondo */
+    background: #f8f9fa !important; /* Redundante pero necesario para algunos navegadores */
+}
+
+/* Asegurarse de que no haya degradados en ningún contenedor interno */
+.projects-section > *, 
+.projects > *, 
+.technologies > * {
+    background-color: transparent;
 }

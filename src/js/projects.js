@@ -1,49 +1,140 @@
 class ProjectManager {
     constructor() {
-        this.projectsContainer = document.getElementById('projectsContainer');
+        this.projectsContainer = document.getElementById('projects-container');
+        this.projects = [];
     }
 
     async loadProjects() {
         try {
+            console.log("Cargando proyectos...");
             const response = await fetch('data/projects.json');
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
             const data = await response.json();
-            this.renderProjects(data.projects);
+            console.log("Proyectos cargados:", data.projects);
+            this.projects = data.projects;
+            this.renderProjects(this.projects);
         } catch (error) {
-            console.error('Error loading projects:', error);
+            console.error('Error al cargar los proyectos:', error);
+            this.projectsContainer.innerHTML = `
+                <div class="error-message">
+                    <p>No se pudieron cargar los proyectos. Por favor, intenta de nuevo más tarde.</p>
+                </div>
+            `;
         }
     }
 
     renderProjects(projects) {
-        projects.forEach((project, index) => {
-            const projectElement = this.createProjectElement(project, index);
-            this.projectsContainer.appendChild(projectElement);
+        if (!this.projectsContainer) {
+            console.error('No se encontró el contenedor de proyectos');
+            return;
+        }
+        
+        this.projectsContainer.innerHTML = '';
+        
+        if (projects.length === 0) {
+            this.projectsContainer.innerHTML = `
+                <div class="no-projects">
+                    <p>No se encontraron proyectos con los filtros seleccionados.</p>
+                </div>
+            `;
+            return;
+        }
+        
+        projects.forEach(project => {
+            const tags = project.tags.map(tag => `<span class="project-tag">${tag}</span>`).join('');
+            
+            // URL por defecto si no se proporciona una
+            const projectUrl = project.url || '#';
+            
+            const projectCard = document.createElement('div');
+            projectCard.className = 'project-card';
+            projectCard.setAttribute('data-categories', project.categories);
+            projectCard.setAttribute('data-aos', 'fade-up');
+            
+            projectCard.innerHTML = `
+                <div class="project-image">
+                    <img src="${project.image}" alt="${project.title}">
+                    <div class="project-overlay">
+                        <a href="${projectUrl}" class="project-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>${project.title}</h3>
+                    <p>${project.description}</p>
+                    <div class="project-tags">
+                        ${tags}
+                    </div>
+                    <div class="project-actions">
+                        <a href="mailto:helpteam.prisma@gmail.com?subject=Consulta%20sobre%20proyecto%20similar%20a%20${encodeURIComponent(project.title)}" class="project-cta">
+                            Solicitar proyecto similar
+                        </a>
+                    </div>
+                </div>
+            `;
+            
+            this.projectsContainer.appendChild(projectCard);
         });
     }
 
-    createProjectElement(project, index) {
-        const delay = index * 200;
-        const element = document.createElement('div');
-        element.className = 'project-card';
-        element.setAttribute('data-aos', 'fade-up');
-        element.setAttribute('data-aos-delay', delay.toString());
-
-        element.innerHTML = `
-            <img src="${project.image}" alt="${project.title}" class="project-image">
-            <div class="project-content">
-                <h3>${project.title}</h3>
-                <p>${project.description}</p>
-            </div>
-        `;
-
-        return element;
+    filterProjects(filter) {
+        console.log("Filtrando proyectos por:", filter);
+        
+        if (filter === 'all') {
+            console.log("Mostrando todos los proyectos");
+            this.renderProjects(this.projects);
+            return;
+        }
+        
+        const filteredProjects = this.projects.filter(project => {
+            const categories = project.categories.split(',');
+            return categories.includes(filter);
+        });
+        
+        console.log("Proyectos filtrados:", filteredProjects);
+        this.renderProjects(filteredProjects);
     }
 }
 
 // Inicializar el gestor de proyectos cuando se carga el documento
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
+    // Inicializar AOS
+    AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true
+    });
+    
+    // Inicializar el gestor de proyectos
     const projectManager = new ProjectManager();
     projectManager.loadProjects();
+    
+    // Configurar los filtros
+    setupFilters(projectManager);
 });
+
+function setupFilters(projectManager) {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            console.log("Filtro clickeado:", this.getAttribute('data-filter'));
+            
+            // Quitar la clase active de todos los botones
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            
+            // Añadir la clase active al botón clickeado
+            this.classList.add('active');
+            
+            // Filtrar los proyectos
+            const filter = this.getAttribute('data-filter');
+            projectManager.filterProjects(filter);
+        });
+    });
+}
 
 // Archivo específico para la página de proyectos
 document.addEventListener('DOMContentLoaded', function() {
@@ -51,10 +142,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Inicializar AOS
     AOS.init({
-        duration: 1000,
-        once: true,
-        offset: 100,
-        disable: true
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true
     });
     
     // Configurar los filtros de proyectos
@@ -103,23 +193,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
-
-// Función para configurar los filtros de proyectos
-function setupFilters() {
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    
-    filterButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            // Actualizar botones activos
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
-            
-            // Aplicar el filtro
-            const filterValue = button.getAttribute('data-filter');
-            applyFilter(filterValue);
-        });
-    });
-}
 
 // Función para aplicar un filtro específico
 function applyFilter(filterValue) {

@@ -101,4 +101,68 @@ document.addEventListener('DOMContentLoaded', () => {
             closeBtn: closeModalBtn
         });
     }
+
+    // Manejo de modales para la sección "Nuestro Enfoque"
+    const approachCards = document.querySelectorAll('.approach-card');
+    const approachModals = document.querySelectorAll('.approach-modal');
+    const closeButtons = document.querySelectorAll('.close-approach-modal');
+
+    // Abrir modal al hacer clic en una tarjeta
+    approachCards.forEach(card => {
+        card.addEventListener('click', () => {
+            const modalId = card.getAttribute('data-modal');
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                // Mostrar el modal sin transición inicial
+                modal.style.transition = 'none';
+                modal.style.backgroundColor = 'rgba(0, 0, 0, 0)';
+                modal.style.backdropFilter = 'blur(0px)';
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden'; // Evitar scroll en el fondo
+                
+                // Forzar un reflow para que los cambios se apliquen inmediatamente
+                void modal.offsetWidth;
+                
+                // Restaurar la transición y aplicar el oscurecimiento
+                modal.style.transition = 'background-color 0.3s ease, backdrop-filter 0.3s ease';
+                modal.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+                modal.style.backdropFilter = 'blur(5px)';
+            }
+        });
+    });
+
+    // Cerrar modal al hacer clic en el botón de cierre
+    closeButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const modal = button.closest('.approach-modal');
+            if (modal) {
+                // Quitar el oscurecimiento
+                modal.style.backgroundColor = 'rgba(0, 0, 0, 0)';
+                modal.style.backdropFilter = 'blur(0px)';
+                
+                // Ocultar después de la transición
+                setTimeout(() => {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = ''; // Restaurar scroll
+                }, 300);
+            }
+        });
+    });
+
+    // Cerrar modal al hacer clic fuera del contenido
+    window.addEventListener('click', (event) => {
+        approachModals.forEach(modal => {
+            if (event.target === modal) {
+                // Quitar el oscurecimiento
+                modal.style.backgroundColor = 'rgba(0, 0, 0, 0)';
+                modal.style.backdropFilter = 'blur(0px)';
+                
+                // Ocultar después de la transición
+                setTimeout(() => {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = ''; // Restaurar scroll
+                }, 300);
+            }
+        });
+    });
 }); 

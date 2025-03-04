@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Función para manejar los clics en las tech-cards
+    // Función simplificada para manejar los clics en las tech-cards
     function handleTechCardClick(e) {
         const card = e.currentTarget;
         

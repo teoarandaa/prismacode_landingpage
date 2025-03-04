@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos - Prisma</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <link rel="stylesheet" href="styles/projects.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">PRISMA</div>
+        <div class="nav-links">
+            <a href="index.html#home">Inicio</a>
+            <a href="projects.html" class="active">Proyectos</a>
+            <a href="index.html#pricing">Precios</a>
+            <a href="index.html#contact" class="contact-btn">Contactar</a>
+        </div>
+    </nav>
+
+    <section id="home" class="hero projects-hero">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <h1 data-aos="fade-up" data-aos-delay="100">Nuestros Proyectos</h1>
+            <p data-aos="fade-up" data-aos-delay="200">Explora algunos de nuestros trabajos más recientes y descubre cómo nuestras soluciones digitales han ayudado a empresas como la tuya a alcanzar sus objetivos.</p>
+            <div class="hero-features" data-aos="fade-up" data-aos-delay="300">
+                <span><i class="fas fa-check-circle"></i> Desarrollo Web</span>
+                <span><i class="fas fa-check-circle"></i> Aplicaciones Móviles</span>
+                <span><i class="fas fa-check-circle"></i> E-commerce</span>
+            </div>
+            <div class="hero-cta" data-aos="fade-up" data-aos-delay="400">
+                <a href="mailto:helpteam.prisma@gmail.com?subject=Consulta%20sobre%20proyecto%20digital&body=Hola%20equipo%20de%20Prisma%2C%0A%0AMe%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios.%0A%0ATipo%20de%20proyecto%3A%0APresupuesto%20estimado%3A%0APlazos%20deseados%3A%0A%0A¡Gracias!" 
+                   class="cta-button">
+                    Comienza tu proyecto
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects">
+        <h2 data-aos="fade-up">Proyectos Destacados</h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Explora nuestros trabajos más recientes</p>
+        
+        <div class="filter-container" data-aos="fade-up" data-aos-delay="200">
+            <button class="filter-btn active" data-filter="all"><i class="fas fa-globe"></i> Todos</button>
+            <button class="filter-btn" data-filter="web"><i class="fas fa-laptop-code"></i> Web</button>
+            <button class="filter-btn" data-filter="app"><i class="fas fa-mobile-alt"></i> Apps</button>
+            <button class="filter-btn" data-filter="ecommerce"><i class="fas fa-shopping-cart"></i> E-commerce</button>
+        </div>
+        
+        <div class="projects-grid" id="projects-container">
+            <!-- Projects will be loaded dynamically -->
+        </div>
+    </section>
+
+    <section id="technologies" class="technologies">
+        <h2 data-aos="fade-up">Tecnologías que Utilizamos</h2>
+        <div class="tech-grid">
+            <div class="tech-card">
+                <div class="tech-card-inner">
+                    <div class="tech-card-front">
+                        <i class="fab fa-html5"></i>
+                        <h3>HTML5</h3>
+                    </div>
+                    <div class="tech-card-back">
+                        <h4>HTML5</h4>
+                        <p>Lenguaje estándar para estructurar y presentar contenido web. Utilizamos las últimas características para crear sitios web modernos y semánticos.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="tech-card">
+                <div class="tech-card-inner">
+                    <div class="tech-card-front">
+                        <i class="fab fa-css3-alt"></i>
+                        <h3>CSS3</h3>
+                    </div>
+                    <div class="tech-card-back">
+                        <h4>CSS3</h4>
+                        <p>Lenguaje de estilos que nos permite crear interfaces modernas y responsivas, con animaciones fluidas y diseños adaptables.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="tech-card">
+                <div class="tech-card-inner">
+                    <div class="tech-card-front">
+                        <i class="fab fa-js"></i>
+                        <h3>JavaScript</h3>
+                    </div>
+                    <div class="tech-card-back">
+                        <h4>JavaScript</h4>
+                        <p>Lenguaje de programación versátil que permite crear experiencias web interactivas y dinámicas del lado del cliente.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="tech-card">
+                <div class="tech-card-inner">
+                    <div class="tech-card-front">
+                        <i class="fab fa-laravel"></i>
+                        <h3>Laravel</h3>
+                    </div>
+                    <div class="tech-card-back">
+                        <h4>Laravel</h4>
+                        <p>Framework PHP robusto para desarrollo backend, permitiendo crear APIs seguras y aplicaciones web escalables.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="tech-card">
+                <div class="tech-card-inner">
+                    <div class="tech-card-front">
+                        <svg class="flutter-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path d="M429.5 236.3L291.7 374.1 429.5 512H272l-59.1-59.1-78.8-78.8L272 236.3H429.5zM272 0L16 256l78.8 78.8L429.5 0H272z"/>
+                        </svg>
+                        <h3>Flutter</h3>
+                    </div>
+                    <div class="tech-card-back">
+                        <h4>Flutter</h4>
+                        <p>Framework de Google para desarrollo multiplataforma, permitiendo crear aplicaciones nativas para iOS y Android con un único código base.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="tech-card">
+                <div class="tech-card-inner">
+                    <div class="tech-card-front">
+                        <i class="fab fa-android"></i>
+                        <h3>Kotlin</h3>
+                    </div>
+                    <div class="tech-card-back">
+                        <h4>Kotlin</h4>
+                        <p>Lenguaje moderno para desarrollo Android, ofreciendo seguridad de tipos y características avanzadas para crear apps nativas.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="tech-card">
+                <div class="tech-card-inner">
+                    <div class="tech-card-front">
+                        <svg class="swift-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path d="M448 156.1c0-4.5-.1-9-.2-13.5a196.3 196.3 0 0 0 -2.6-29.4 99.6 99.6 0 0 0 -9.2-28A94.1 94.1 0 0 0 394.8 44a99.2 99.2 0 0 0 -28-9.2 195 195 0 0 0 -29.4-2.6c-4.5-.1-9-.2-13.5-.2H124.1c-4.5 0-9 .1-13.5 .2-2.5 .1-4.9 .2-7.4 .3a171.7 171.7 0 0 0 -22.1 2.3 103.1 103.1 0 0 0 -21.2 6.1q-3.5 1.5-6.8 3.1a94.7 94.7 0 0 0 -18.4 12.3c-1.9 1.6-3.7 3.3-5.4 5A93.9 93.9 0 0 0 12 85.2a99.5 99.5 0 0 0 -9.2 28 196.3 196.3 0 0 0 -2.5 29.4c-.1 4.5-.2 9-.2 13.5v199.8c0 4.5 .1 9 .2 13.5a196.1 196.1 0 0 0 2.6 29.4 99.3 99.3 0 0 0 9.2 28A94.3 94.3 0 0 0 53.2 468a99.5 99.5 0 0 0 28 9.2 195 195 0 0 0 29.4 2.6c4.5 .1 9 .2 13.5 .2H323.9c4.5 0 9-.1 13.5-.2a196.6 196.6 0 0 0 29.4-2.6 99.6 99.6 0 0 0 28-9.2A94.2 94.2 0 0 0 436 426.8a99.3 99.3 0 0 0 9.2-28 194.8 194.8 0 0 0 2.6-29.4c.1-4.5 .2-9 .2-13.5V172.1c0-5.4 0-10.7 0-16.1zm-69.9 241c-20-38.9-57.2-29.3-76.3-19.5-1.7 1-3.5 2-5.3 3l-.4 .3c-39.5 21-92.5 22.5-145.9-.4A234.6 234.6 0 0 1 45 290.1a230.6 230.6 0 0 0 39.2 23.4c56.4 26.4 113 24.5 153 0-57-43.9-104.6-101-141.1-147.2a197.1 197.1 0 0 1 -18.8-25.9c43.7 40 112.7 90.2 137.5 104.1-52.6-55.5-98.9-123.9-96.7-121.7 82.8 83.4 159.2 130.6 159.2 130.6 2.9 1.6 5 2.9 6.7 4a127.4 127.4 0 0 0 4.2-12.5c13.2-48.3-1.7-103.6-35.3-149.2C329.6 141.8 375 229.3 356.4 303.4c-.4 1.7-1 3.4-1.4 5.1 38.5 47.4 28 98.2 23.1 88.6z"/>
+                        </svg>
+                        <h3>Swift</h3>
+                    </div>
+                    <div class="tech-card-back">
+                        <h4>Swift</h4>
+                        <p>Lenguaje potente y intuitivo para desarrollo iOS, permitiendo crear aplicaciones nativas de alto rendimiento para el ecosistema Apple.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="contact-content" data-aos="fade-up">
+            <h2>¿Listo para transformar tu negocio?</h2>
+            <p>Cuéntanos tu proyecto y construyamos juntos el futuro digital de tu empresa</p>
+            <a href="mailto:helpteam.prisma@gmail.com?subject=Consulta%20sobre%20proyecto%20digital&body=Hola%20equipo%20de%20Prisma%2C%0A%0AMe%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios.%0A%0ATipo%20de%20proyecto%3A%0APresupuesto%20estimado%3A%0APlazos%20deseados%3A%0A%0A¡Gracias!" 
+               class="contact-btn" data-aos="fade-up" data-aos-delay="200">
+                Hablemos
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">PRISMA</div>
+            <div class="footer-links">
+                <a href="index.html#home">Inicio</a>
+                <a href="projects.html">Proyectos</a>
+                <a href="index.html#contact">Contacto</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/tech-cards.js"></script>
+    <script src="js/projects.js"></script>
+</body>
+</html> 

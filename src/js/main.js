@@ -212,7 +212,7 @@ document.addEventListener('DOMContentLoaded', () => {
     loadProjects();
 });
 
-// Función simplificada para cargar los proyectos sin filtros ni destacados
+// Función para cargar los proyectos en un carrusel
 function loadProjects() {
     const projectsContainer = document.querySelector('.projects .container');
     
@@ -251,33 +251,178 @@ function loadProjects() {
         <p class="section-intro">Explora algunos de nuestros trabajos más recientes y descubre cómo nuestras soluciones digitales han ayudado a empresas como la tuya a alcanzar sus objetivos.</p>
     `;
     
-    // Añadir grid de proyectos
-    projectsHTML += '<div class="projects-grid">';
-    
-    // Añadir cada proyecto al grid
-    projects.forEach(project => {
-        projectsHTML += `
-            <div class="project-card">
-                <div class="project-img">
-                    <img src="${project.image}" alt="${project.title}">
-                </div>
-                <div class="project-info">
-                    <h3>${project.title}</h3>
-                    <p>${project.description}</p>
-                    <a href="#contact" class="project-cta">Solicitar proyecto similar</a>
-                </div>
+    // Añadir estructura del carrusel
+    projectsHTML += `
+        <div class="carousel-container">
+            <div class="carousel-track">
+                ${projects.map(project => `
+                    <div class="carousel-slide">
+                        <div class="project-card">
+                            <div class="project-img">
+                                <img src="${project.image}" alt="${project.title}">
+                            </div>
+                            <div class="project-info">
+                                <h3>${project.title}</h3>
+                                <p>${project.description}</p>
+                                <a href="#contact" class="project-cta">Solicitar proyecto similar</a>
+                            </div>
+                        </div>
+                    </div>
+                `).join('')}
             </div>
-        `;
-    });
-    
-    projectsHTML += '</div>';
+            <button class="carousel-button prev" aria-label="Proyecto anterior">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                    <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                </svg>
+            </button>
+            <button class="carousel-button next" aria-label="Proyecto siguiente">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                </svg>
+            </button>
+            <div class="carousel-dots">
+                ${projects.map((_, index) => `
+                    <button class="carousel-dot ${index === 0 ? 'active' : ''}" data-index="${index}" aria-label="Ver proyecto ${index + 1}"></button>
+                `).join('')}
+            </div>
+        </div>
+    `;
     
     // Insertar todo el HTML en el contenedor
     projectsContainer.innerHTML = projectsHTML;
     
-    // Aplicar transiciones a las tarjetas
-    const projectCards = document.querySelectorAll('.project-card');
-    projectCards.forEach(card => {
-        card.style.transition = 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+    // Inicializar el carrusel
+    initCarousel();
+}
+
+// Función para inicializar el carrusel
+function initCarousel() {
+    const track = document.querySelector('.carousel-track');
+    const slides = Array.from(document.querySelectorAll('.carousel-slide'));
+    const nextButton = document.querySelector('.carousel-button.next');
+    const prevButton = document.querySelector('.carousel-button.prev');
+    const dotsNav = document.querySelector('.carousel-dots');
+    const dots = Array.from(document.querySelectorAll('.carousel-dot'));
+    
+    if (!track || !slides.length || !nextButton || !prevButton || !dotsNav || !dots.length) {
+        console.error("No se encontraron los elementos necesarios para el carrusel");
+        return;
+    }
+    
+    const slideWidth = slides[0].getBoundingClientRect().width;
+    
+    // Posicionar los slides uno al lado del otro
+    slides.forEach((slide, index) => {
+        slide.style.left = slideWidth * index + 'px';
     });
+    
+    // Función para mover a un slide específico
+    const moveToSlide = (currentSlide, targetSlide) => {
+        track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
+        currentSlide.classList.remove('current-slide');
+        targetSlide.classList.add('current-slide');
+    };
+    
+    // Función para actualizar los dots
+    const updateDots = (currentDot, targetDot) => {
+        currentDot.classList.remove('active');
+        targetDot.classList.add('active');
+    };
+    
+    // Función para ocultar/mostrar flechas
+    const updateArrows = (targetIndex) => {
+        prevButton.classList.toggle('hidden', targetIndex === 0);
+        nextButton.classList.toggle('hidden', targetIndex === slides.length - 1);
+    };
+    
+    // Establecer el primer slide como actual
+    slides[0].classList.add('current-slide');
+    
+    // Event listener para el botón siguiente
+    nextButton.addEventListener('click', () => {
+        const currentSlide = track.querySelector('.current-slide');
+        const nextSlide = currentSlide.nextElementSibling;
+        const currentDot = dotsNav.querySelector('.active');
+        const nextDot = currentDot.nextElementSibling;
+        const nextIndex = slides.indexOf(nextSlide);
+        
+        if (nextSlide) {
+            moveToSlide(currentSlide, nextSlide);
+            updateDots(currentDot, nextDot);
+            updateArrows(nextIndex);
+        }
+    });
+    
+    // Event listener para el botón anterior
+    prevButton.addEventListener('click', () => {
+        const currentSlide = track.querySelector('.current-slide');
+        const prevSlide = currentSlide.previousElementSibling;
+        const currentDot = dotsNav.querySelector('.active');
+        const prevDot = currentDot.previousElementSibling;
+        const prevIndex = slides.indexOf(prevSlide);
+        
+        if (prevSlide) {
+            moveToSlide(currentSlide, prevSlide);
+            updateDots(currentDot, prevDot);
+            updateArrows(prevIndex);
+        }
+    });
+    
+    // Event listener para los dots
+    dotsNav.addEventListener('click', e => {
+        const targetDot = e.target.closest('button');
+        
+        if (!targetDot) return;
+        
+        const currentSlide = track.querySelector('.current-slide');
+        const currentDot = dotsNav.querySelector('.active');
+        const targetIndex = parseInt(targetDot.getAttribute('data-index'));
+        const targetSlide = slides[targetIndex];
+        
+        moveToSlide(currentSlide, targetSlide);
+        updateDots(currentDot, targetDot);
+        updateArrows(targetIndex);
+    });
+    
+    // Inicialmente ocultar el botón anterior
+    updateArrows(0);
+    
+    // Añadir swipe para dispositivos móviles
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    track.addEventListener('touchstart', e => {
+        touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+    
+    track.addEventListener('touchend', e => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    }, { passive: true });
+    
+    function handleSwipe() {
+        const currentSlide = track.querySelector('.current-slide');
+        const currentDot = dotsNav.querySelector('.active');
+        const currentIndex = slides.indexOf(currentSlide);
+        
+        if (touchEndX < touchStartX - 50 && currentIndex < slides.length - 1) {
+            // Swipe izquierda (siguiente)
+            const nextSlide = currentSlide.nextElementSibling;
+            const nextDot = currentDot.nextElementSibling;
+            const nextIndex = currentIndex + 1;
+            
+            moveToSlide(currentSlide, nextSlide);
+            updateDots(currentDot, nextDot);
+            updateArrows(nextIndex);
+        } else if (touchEndX > touchStartX + 50 && currentIndex > 0) {
+            // Swipe derecha (anterior)
+            const prevSlide = currentSlide.previousElementSibling;
+            const prevDot = currentDot.previousElementSibling;
+            const prevIndex = currentIndex - 1;
+            
+            moveToSlide(currentSlide, prevSlide);
+            updateDots(currentDot, prevDot);
+            updateArrows(prevIndex);
+        }
+    }
 } 

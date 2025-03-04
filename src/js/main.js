@@ -63,4 +63,42 @@ document.addEventListener('DOMContentLoaded', () => {
             e.stopPropagation();
         });
     });
+    
+    // Crear overlay para el fondo
+    const overlay = document.createElement('div');
+    overlay.className = 'overlay';
+    document.body.appendChild(overlay);
+    
+    // Manejo del modal de información de dominio
+    const domainInfoIcon = document.getElementById('domainInfoIcon');
+    const domainInfoModal = document.getElementById('domainInfoModal');
+    const closeModalBtn = document.querySelector('.close-modal');
+
+    if (domainInfoIcon && domainInfoModal) {
+        // Abrir modal al hacer clic en el icono
+        domainInfoIcon.onclick = function() {
+            domainInfoModal.style.display = "block";
+            console.log("Modal abierto");
+        }
+        
+        // Cerrar modal al hacer clic en la X
+        if (closeModalBtn) {
+            closeModalBtn.onclick = function() {
+                domainInfoModal.style.display = "none";
+            }
+        }
+        
+        // Cerrar modal al hacer clic fuera del contenido
+        window.onclick = function(event) {
+            if (event.target == domainInfoModal) {
+                domainInfoModal.style.display = "none";
+            }
+        }
+    } else {
+        console.error("Elementos del modal no encontrados", {
+            icon: domainInfoIcon,
+            modal: domainInfoModal,
+            closeBtn: closeModalBtn
+        });
+    }
 }); 

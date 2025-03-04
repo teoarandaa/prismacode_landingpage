@@ -443,3 +443,17 @@
 .technologies > * {
     background-color: transparent;
 }
+
+/* Actualizar la imagen de fondo para la sección hero-projects con un tamaño mayor */
+.projects-hero .hero-background {
+    background-image: linear-gradient(rgba(99, 102, 241, 0.8), rgba(79, 70, 229, 0.8)), url("../assets/9906016.jpg") !important;
+    background-size: 100% 100%, 40% !important; /* Aumentado de 40% a 60% */
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    z-index: 0;
+}
+
+/* Mantener el estilo actual pero asegurar que la nueva imagen se muestre correctamente */
+.projects-hero .hero-background::after {
+    content: none !important; /* Eliminar cualquier pseudo-elemento que pudiera estar interfiriendo */
+}

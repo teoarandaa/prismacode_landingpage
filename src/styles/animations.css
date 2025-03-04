@@ -29,7 +29,8 @@
     animation: fadeInUp 0.6s ease-out;
 }
 
-.hero-background {
+/* Eliminamos la animación del hero-background y su keyframe */
+/* .hero-background {
     animation: gradientAnimation 15s ease infinite;
     background-size: 400% 400%;
 }
@@ -44,4 +45,4 @@
     100% {
         background-position: 0% 50%;
     }
-} 
+} */ 

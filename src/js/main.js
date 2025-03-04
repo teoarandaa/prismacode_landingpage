@@ -3,7 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     AOS.init({
         duration: 1000,
         once: true,
-        offset: 100
+        offset: 100,
+        disable: true // Desactivamos AOS para usar nuestras propias animaciones
     });
 
     // Smooth scroll para los enlaces de navegación
@@ -165,4 +166,118 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-}); 
+
+    // Función para activar las animaciones cuando los elementos son visibles
+    function checkVisibility() {
+        const approachSection = document.querySelector('.approach');
+        const benefitsSection = document.querySelector('.benefits');
+        const projectsSection = document.querySelector('.projects'); // Añadimos la sección de proyectos
+        
+        if (approachSection) {
+            const rect = approachSection.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 100 && rect.bottom >= 0) {
+                approachSection.classList.add('animate');
+            } else {
+                approachSection.classList.remove('animate');
+            }
+        }
+        
+        if (benefitsSection) {
+            const rect = benefitsSection.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 100 && rect.bottom >= 0) {
+                benefitsSection.classList.add('animate');
+            } else {
+                benefitsSection.classList.remove('animate');
+            }
+        }
+        
+        // Añadimos la verificación para la sección de proyectos
+        if (projectsSection) {
+            const rect = projectsSection.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 100 && rect.bottom >= 0) {
+                projectsSection.classList.add('animate');
+            } else {
+                projectsSection.classList.remove('animate');
+            }
+        }
+    }
+    
+    // Verificar visibilidad al hacer scroll
+    window.addEventListener('scroll', checkVisibility);
+    
+    // Llamamos a checkVisibility después de un pequeño retraso
+    setTimeout(checkVisibility, 100);
+    
+    // Cargar los proyectos
+    loadProjects();
+});
+
+// Función simplificada para cargar los proyectos sin filtros ni destacados
+function loadProjects() {
+    const projectsContainer = document.querySelector('.projects .container');
+    
+    if (!projectsContainer) {
+        console.error("No se encontró el contenedor de proyectos");
+        return;
+    }
+    
+    // Array de proyectos
+    const projects = [
+        {
+            title: "Plataforma E-commerce para Boutique de Moda",
+            description: "Desarrollo completo de tienda online con catálogo personalizado, sistema de pagos integrado y panel de administración intuitivo que incrementó las ventas en un 45%.",
+            image: "assets/project1.jpg"
+        },
+        {
+            title: "App de Delivery para Restaurantes Locales",
+            description: "Aplicación nativa para iOS y Android que conecta restaurantes con clientes, incluyendo seguimiento en tiempo real, sistema de valoraciones y programa de fidelización.",
+            image: "assets/project2.jpg"
+        },
+        {
+            title: "Dashboard Analítico para Empresa Financiera",
+            description: "Interfaz interactiva para visualización de métricas empresariales con gráficos personalizables, alertas automáticas y reportes exportables que optimizó la toma de decisiones.",
+            image: "assets/project3.jpg"
+        },
+        {
+            title: "Rediseño de Identidad Visual Corporativa",
+            description: "Actualización completa de marca para empresa de servicios financieros, incluyendo logo, paleta de colores, tipografía y materiales promocionales que modernizó su imagen.",
+            image: "assets/project4.jpg"
+        }
+    ];
+    
+    // Crear estructura HTML para la sección de proyectos
+    let projectsHTML = `
+        <h2>Nuestros Proyectos</h2>
+        <p class="section-intro">Explora algunos de nuestros trabajos más recientes y descubre cómo nuestras soluciones digitales han ayudado a empresas como la tuya a alcanzar sus objetivos.</p>
+    `;
+    
+    // Añadir grid de proyectos
+    projectsHTML += '<div class="projects-grid">';
+    
+    // Añadir cada proyecto al grid
+    projects.forEach(project => {
+        projectsHTML += `
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="${project.image}" alt="${project.title}">
+                </div>
+                <div class="project-info">
+                    <h3>${project.title}</h3>
+                    <p>${project.description}</p>
+                    <a href="#contact" class="project-cta">Solicitar proyecto similar</a>
+                </div>
+            </div>
+        `;
+    });
+    
+    projectsHTML += '</div>';
+    
+    // Insertar todo el HTML en el contenedor
+    projectsContainer.innerHTML = projectsHTML;
+    
+    // Aplicar transiciones a las tarjetas
+    const projectCards = document.querySelectorAll('.project-card');
+    projectCards.forEach(card => {
+        card.style.transition = 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+    });
+} 

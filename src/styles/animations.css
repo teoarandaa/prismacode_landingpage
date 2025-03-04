@@ -47,11 +47,86 @@
     }
 } */
 
-/* Añadir esta regla para asegurarnos de que las animaciones no interfieran con el hover */
-.benefit-card[data-aos].aos-animate {
-    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+/* Animación para que los apartados aparezcan uno a uno desde la derecha */
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
-.benefit-card[data-aos].aos-animate:hover {
+/* Configuración inicial para los elementos */
+.approach-card, .benefit-card, .project-card {
+    opacity: 0; /* Inicialmente invisibles */
+    will-change: opacity, transform; /* Optimización de rendimiento */
+}
+
+/* Animaciones para approach-card */
+.approach.animate .approach-card:nth-child(1) {
+    animation: fadeInRight 0.6s ease-out forwards;
+    animation-delay: 0.1s;
+}
+
+.approach.animate .approach-card:nth-child(2) {
+    animation: fadeInRight 0.6s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+.approach.animate .approach-card:nth-child(3) {
+    animation: fadeInRight 0.6s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+/* Animaciones para benefit-card */
+.benefits.animate .benefit-card:nth-child(1) {
+    animation: fadeInRight 0.6s ease-out forwards;
+    animation-delay: 0.1s;
+}
+
+.benefits.animate .benefit-card:nth-child(2) {
+    animation: fadeInRight 0.6s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+.benefits.animate .benefit-card:nth-child(3) {
+    animation: fadeInRight 0.6s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+.benefits.animate .benefit-card:nth-child(4) {
+    animation: fadeInRight 0.6s ease-out forwards;
+    animation-delay: 0.7s;
+}
+
+/* Animaciones para project-card */
+.projects.animate .project-card:nth-child(1) {
+    animation: fadeInRight 0.6s ease-out forwards;
+    animation-delay: 0.1s;
+}
+
+.projects.animate .project-card:nth-child(2) {
+    animation: fadeInRight 0.6s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+.projects.animate .project-card:nth-child(3) {
+    animation: fadeInRight 0.6s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+.projects.animate .project-card:nth-child(4) {
+    animation: fadeInRight 0.6s ease-out forwards;
+    animation-delay: 0.7s;
+}
+
+/* Aseguramos que las animaciones no interfieran con el hover */
+.approach-card:hover,
+.benefit-card:hover,
+.project-card:hover {
     transform: translateY(-5px) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
 } 

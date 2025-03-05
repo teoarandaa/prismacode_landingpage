@@ -434,24 +434,24 @@
 
 @media (max-width: 1200px) {
     .projects-hero .hero-background {
-        background-size: 100% 100%, 45% !important;
+        background-size: 100% 100%, 65% !important;
     }
 }
 
 @media (max-width: 992px) {
     .projects-hero .hero-background {
-        background-size: 100% 100%, 50% !important;
+        background-size: 100% 100%, 70% !important;
     }
 }
 
 @media (max-width: 768px) {
     .projects-hero .hero-background {
-        background-size: 100% 100%, 55% !important;
+        background-size: 100% 100%, 80% !important;
     }
 }
 
 @media (max-width: 576px) {
     .projects-hero .hero-background {
-        background-size: 100% 100%, 60% !important;
+        background-size: 100% 100%, 85% !important;
     }
 }

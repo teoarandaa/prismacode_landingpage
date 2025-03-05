@@ -144,38 +144,30 @@
 }
 
 @media (max-width: 1200px) {
-    .privacy-hero .hero-background {
-        background-size: 100% 100%, 45%;
-    }
+    .privacy-hero .hero-background,
     .terms-hero .hero-background {
-        background-size: 100% 100%, 45%;
+        background-size: 100% 100%, 65%;
     }
 }
 
 @media (max-width: 992px) {
-    .privacy-hero .hero-background {
-        background-size: 100% 100%, 50%;
-    }
+    .privacy-hero .hero-background,
     .terms-hero .hero-background {
-        background-size: 100% 100%, 50%;
+        background-size: 100% 100%, 70%;
     }
 }
 
 @media (max-width: 768px) {
-    .privacy-hero .hero-background {
-        background-size: 100% 100%, 55%;
-    }
+    .privacy-hero .hero-background,
     .terms-hero .hero-background {
-        background-size: 100% 100%, 55%;
+        background-size: 100% 100%, 80%;
     }
 }
 
 @media (max-width: 576px) {
-    .privacy-hero .hero-background {
-        background-size: 100% 100%, 60%;
-    }
+    .privacy-hero .hero-background,
     .terms-hero .hero-background {
-        background-size: 100% 100%, 60%;
+        background-size: 100% 100%, 85%;
     }
 }
 

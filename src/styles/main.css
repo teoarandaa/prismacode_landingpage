@@ -93,25 +93,29 @@ body {
     width: 100%;
     height: 100%;
     background-image: linear-gradient(rgba(99, 102, 241, 0.8), rgba(79, 70, 229, 0.8)), url("../assets/6496071.jpg");
-    background-size: 100% 100%, 40%;
+    background-size: cover, 40%;
     background-position: center;
     background-repeat: no-repeat;
     z-index: 0;
 }
 
 @media (max-width: 1200px) {
-    .hero-background {
-        background-size: 100% 100%, 65%;
+    .hero .hero-background {
+        background-size: cover, 65% !important;
     }
 }
 
 @media (max-width: 992px) {
-    .hero-background {
-        background-size: 100% 100%, 70%;
+    .hero .hero-background {
+        background-size: cover, 70% !important;
     }
 }
 
 @media (max-width: 768px) {
+    .hero .hero-background {
+        background-size: cover, 80% !important;
+    }
+
     .hamburger {
         display: block;
         z-index: 1001;
@@ -148,10 +152,6 @@ body {
     .nav-links a {
         margin: 1rem 0;
         font-size: 1.2rem;
-    }
-
-    .hero-background {
-        background-size: 100% 100%, 60%;
     }
 
     .hero-content h1 {
@@ -194,8 +194,8 @@ body {
 }
 
 @media (max-width: 576px) {
-    .hero-background {
-        background-size: 100% 100%, 85%;
+    .hero .hero-background {
+        background-size: cover, 85% !important;
     }
 
     .hero-content h1 {
@@ -573,7 +573,7 @@ body {
     }
     
     .hero-background {
-        background-size: 100% 100%, 60%;
+        background-size: cover, 60% !important;
     }
 }
 

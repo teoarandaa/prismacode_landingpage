@@ -46,15 +46,21 @@
 .legal-content {
     max-width: 800px;
     margin: 60px auto;
-    padding: 0 20px;
+    padding: 3rem;
     background: white;
     border-radius: 1rem;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
+.legal-content h1 {
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+    font-size: 2.5rem;
+}
+
 .legal-content section {
-    margin-bottom: 2rem;
-    padding: 2rem;
+    margin-bottom: 2.5rem;
+    padding: 0 1rem;
 }
 
 .legal-content h2 {
@@ -86,8 +92,8 @@
 .last-updated {
     color: #666;
     font-style: italic;
-    text-align: right;
-    padding: 1rem 2rem;
+    margin-bottom: 3rem;
+    padding-bottom: 1.5rem;
     border-bottom: 1px solid #eee;
 }
 

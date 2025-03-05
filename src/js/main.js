@@ -1,10 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Inicializar AOS (Animate On Scroll)
     AOS.init({
-        duration: 1000,
+        duration: 800,
+        easing: 'ease-in-out',
         once: true,
-        offset: 100,
-        disable: false // Habilitamos AOS para usar sus animaciones
+        mirror: false,
+        disable: false
     });
 
     // Smooth scroll para los enlaces de navegación
@@ -79,7 +80,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // Abrir modal al hacer clic en el icono
         domainInfoIcon.onclick = function() {
             domainInfoModal.style.display = "block";
-            console.log("Modal abierto");
         }
         
         // Cerrar modal al hacer clic en la X
@@ -95,12 +95,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 domainInfoModal.style.display = "none";
             }
         }
-    } else {
-        console.error("Elementos del modal no encontrados", {
-            icon: domainInfoIcon,
-            modal: domainInfoModal,
-            closeBtn: closeModalBtn
-        });
     }
 
     // Manejo de modales para la sección "Nuestro Enfoque"
@@ -132,7 +126,34 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Cerrar modal al hacer clic en el botón de cierre
+    // Manejo de modales para la sección "¿Por qué digitalizar tu empresa?"
+    const readMoreButtons = document.querySelectorAll('.read-more-btn');
+    
+    // Abrir modal al hacer clic en "Leer más"
+    readMoreButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const modalId = button.getAttribute('data-modal');
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                // Mostrar el modal sin transición inicial
+                modal.style.transition = 'none';
+                modal.style.backgroundColor = 'rgba(0, 0, 0, 0)';
+                modal.style.backdropFilter = 'blur(0px)';
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden'; // Evitar scroll en el fondo
+                
+                // Forzar un reflow para que los cambios se apliquen inmediatamente
+                void modal.offsetWidth;
+                
+                // Restaurar la transición y aplicar el oscurecimiento
+                modal.style.transition = 'background-color 0.3s ease, backdrop-filter 0.3s ease';
+                modal.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+                modal.style.backdropFilter = 'blur(5px)';
+            }
+        });
+    });
+
+    // Cerrar modal al hacer clic en el botón de cierre (para ambos tipos de modales)
     closeButtons.forEach(button => {
         button.addEventListener('click', () => {
             const modal = button.closest('.approach-modal');
@@ -150,7 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Cerrar modal al hacer clic fuera del contenido
+    // Cerrar modal al hacer clic fuera del contenido (para ambos tipos de modales)
     window.addEventListener('click', (event) => {
         approachModals.forEach(modal => {
             if (event.target === modal) {
@@ -169,7 +190,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Función para activar las animaciones cuando los elementos son visibles
     function checkVisibility() {
-        // Eliminamos la verificación para benefitsSection para evitar la doble animación
         const approachSection = document.querySelector('.approach');
         const projectsSection = document.querySelector('.projects');
         const pricingSection = document.querySelector('.pricing');
@@ -201,17 +221,10 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     }
-    
-    // Verificar visibilidad al hacer scroll
+
+    // Verificar visibilidad al cargar y al hacer scroll
+    window.addEventListener('load', checkVisibility);
     window.addEventListener('scroll', checkVisibility);
-    
-    // Llamamos a checkVisibility después de un pequeño retraso
-    setTimeout(checkVisibility, 100);
-    
-    // Cargar los proyectos
-    if (typeof loadProjects === 'function') {
-        loadProjects();
-    }
 });
 
 // Función para cargar los proyectos en un carrusel

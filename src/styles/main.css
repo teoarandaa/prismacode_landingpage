@@ -1218,4 +1218,39 @@ footer {
 .approach.animate .approach-card,
 .benefits.animate .benefit-card {
     animation-play-state: running;
+}
+
+/* Estilos para los botones "Leer más" en las tarjetas de beneficios */
+.read-more-btn {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.read-more-btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Asegurarse de que las tarjetas de beneficios tengan suficiente espacio para el botón */
+.benefit-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.benefit-card p {
+    margin-bottom: 1rem;
 } 

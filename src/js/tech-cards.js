@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('.tech-card.active').forEach(activeCard => {
             if (activeCard !== card) {
                 activeCard.classList.remove('active');
+                // Forzar reflow para reiniciar animaciones
+                void activeCard.offsetWidth;
             }
         });
         
@@ -21,16 +23,23 @@ document.addEventListener('DOMContentLoaded', function() {
     const techCards = document.querySelectorAll('.tech-card');
     console.log("Found tech cards:", techCards.length);
     
-    techCards.forEach(card => {
-        card.addEventListener('click', handleTechCardClick);
-    });
-    
-    // Cerrar cards al hacer click fuera
-    document.addEventListener('click', function(e) {
-        if (!e.target.closest('.tech-card')) {
-            document.querySelectorAll('.tech-card.active').forEach(card => {
-                card.classList.remove('active');
+    if (techCards.length > 0) {
+        techCards.forEach(card => {
+            card.addEventListener('click', handleTechCardClick);
+            
+            // Prevenir que el click en la card inicie el drag del carousel
+            card.addEventListener('mousedown', function(e) {
+                e.stopPropagation();
             });
-        }
-    });
+        });
+        
+        // Cerrar cards al hacer click fuera
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.tech-card')) {
+                document.querySelectorAll('.tech-card.active').forEach(card => {
+                    card.classList.remove('active');
+                });
+            }
+        });
+    }
 }); 

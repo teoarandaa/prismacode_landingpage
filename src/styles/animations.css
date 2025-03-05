@@ -131,4 +131,69 @@
 .pricing-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 30px rgba(99, 102, 241, 0.15);
+}
+
+/* Animación para tech cards */
+/* Animaciones para mostrar información */
+@keyframes hideIcon {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+
+@keyframes showInfo {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animaciones para volver al estado original */
+@keyframes showIcon {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes hideInfo {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+}
+
+/* Aplicar animaciones cuando la tarjeta está activa */
+.tech-card.active .tech-card-front {
+    animation: hideIcon 0.3s forwards;
+}
+
+.tech-card.active .tech-card-back {
+    animation: showInfo 0.4s forwards;
+}
+
+/* Aplicar animaciones cuando la tarjeta vuelve a su estado original */
+.tech-card:not(.active) .tech-card-front {
+    animation: showIcon 0.4s forwards;
+}
+
+.tech-card:not(.active) .tech-card-back {
+    animation: hideInfo 0.3s forwards;
 } 

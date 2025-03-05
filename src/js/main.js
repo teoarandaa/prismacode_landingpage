@@ -30,24 +30,24 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Función simplificada para manejar los clics en las tech-cards
-    function handleTechCardClick(e) {
-        const card = e.currentTarget;
-        
-        // Cerrar cualquier otra card activa
-        document.querySelectorAll('.tech-card.active').forEach(activeCard => {
-            if (activeCard !== card) {
-                activeCard.classList.remove('active');
-            }
-        });
-
-        // Toggle de la card actual
-        card.classList.toggle('active');
-    }
-
-    // Añadir event listeners a todas las tech-cards
+    // Manejo de tech-cards
     document.querySelectorAll('.tech-card').forEach(card => {
-        card.addEventListener('click', handleTechCardClick);
+        card.addEventListener('click', function() {
+            // Cerrar cualquier otra card activa
+            document.querySelectorAll('.tech-card.active').forEach(activeCard => {
+                if (activeCard !== this) {
+                    activeCard.classList.remove('active');
+                }
+            });
+            
+            // Toggle de la card actual
+            this.classList.toggle('active');
+        });
+        
+        // Prevenir que el click en la card inicie el drag del carousel
+        card.addEventListener('mousedown', function(e) {
+            e.stopPropagation();
+        });
     });
 
     // Cerrar cards al hacer click fuera
@@ -59,13 +59,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Prevenir que el click en la card inicie el drag del carousel
-    document.querySelectorAll('.tech-card').forEach(card => {
-        card.addEventListener('mousedown', (e) => {
-            e.stopPropagation();
-        });
-    });
-    
     // Crear overlay para el fondo
     const overlay = document.createElement('div');
     overlay.className = 'overlay';

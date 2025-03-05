@@ -128,6 +128,18 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Configurar los filtros
     setupFilters(projectManager);
+    
+    // Cerrar el menú al hacer clic en un enlace de navegación
+    const navLinks = document.querySelectorAll('.nav-links a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+        });
+    });
 });
 
 function setupFilters(projectManager) {

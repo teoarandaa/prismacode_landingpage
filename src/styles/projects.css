@@ -336,9 +336,16 @@
 }
 
 @media (max-width: 768px) {
+    .projects-hero {
+        padding-top: 80px; /* Espacio para el menú fijo */
+    }
+    
     .projects-grid {
         grid-template-columns: 1fr;
-        max-width: 500px;
+    }
+    
+    .filter-container {
+        flex-wrap: wrap;
     }
     
     .filter-btn {

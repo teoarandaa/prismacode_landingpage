@@ -98,6 +98,10 @@
 }
 
 @media (max-width: 768px) {
+    .legal-hero {
+        padding-top: 80px; /* Espacio para el menú fijo */
+    }
+    
     .legal-hero h1 {
         font-size: 2rem;
     }
@@ -107,15 +111,19 @@
     }
 
     .legal-content {
-        margin-top: 40px;
+        padding: 2rem 1.5rem;
     }
 
     .legal-content section {
         padding: 1.5rem;
     }
 
+    .legal-content h1 {
+        font-size: 1.8rem;
+    }
+
     .legal-content h2 {
-        font-size: 1.25rem;
+        font-size: 1.5rem;
     }
 
     .legal-hero .hero-background {

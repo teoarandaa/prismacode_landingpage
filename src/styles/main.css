@@ -153,11 +153,71 @@ body {
     .hero-background {
         background-size: 100% 100%, 60%;
     }
+
+    .hero-content h1 {
+        font-size: 1.8rem !important;
+        line-height: 1.2 !important;
+        margin-bottom: 0.7rem !important;
+    }
+    
+    .hero-content p {
+        font-size: 0.85rem !important;
+        line-height: 1.4 !important;
+        margin-bottom: 0.9rem !important;
+    }
+    
+    .hero-features {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-features span {
+        font-size: 0.8rem !important;
+    }
+    
+    .cta-button {
+        font-size: 0.85rem;
+        padding: 0.6rem 1.2rem;
+    }
+    
+    .hero {
+        padding-top: 80px;
+    }
 }
 
 @media (max-width: 576px) {
     .hero-background {
         background-size: 100% 100%, 85%;
+    }
+
+    .hero-content h1 {
+        font-size: 1.5rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+    
+    .hero-content p {
+        font-size: 0.75rem !important;
+        margin-bottom: 0.8rem !important;
+    }
+    
+    .hero-features span {
+        font-size: 0.7rem !important;
+    }
+    
+    .hero {
+        padding-top: 70px;
+    }
+    
+    .hero-content {
+        padding: 0 1rem;
+        max-width: 100%;
+    }
+    
+    .cta-button {
+        font-size: 0.75rem;
+        padding: 0.5rem 1rem;
     }
 }
 

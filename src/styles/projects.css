@@ -358,11 +358,25 @@
     }
     
     .projects h2 {
-        font-size: 2.2rem;
+        font-size: 1.8rem;
     }
     
     .section-subtitle {
-        font-size: 1.1rem;
+        font-size: 0.9rem;
+    }
+    
+    .projects-hero .hero-content h1 {
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+    
+    .projects-hero .hero-content p {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+    
+    .projects-hero .hero-features span {
+        font-size: 0.8rem;
     }
 }
 
@@ -379,11 +393,23 @@
     }
     
     .projects h2 {
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
     
     .section-subtitle {
-        font-size: 1rem;
+        font-size: 0.85rem;
+    }
+    
+    .projects-hero .hero-content h1 {
+        font-size: 1.5rem;
+    }
+    
+    .projects-hero .hero-content p {
+        font-size: 0.75rem;
+    }
+    
+    .projects-hero .hero-features span {
+        font-size: 0.7rem;
     }
 }
 

@@ -103,11 +103,13 @@
     }
     
     .legal-hero h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        line-height: 1.2;
     }
 
     .legal-hero p {
-        font-size: 1rem;
+        font-size: 0.85rem;
+        line-height: 1.4;
     }
 
     .legal-content {
@@ -115,19 +117,45 @@
     }
 
     .legal-content section {
-        padding: 1.5rem;
+        padding: 0 0.5rem;
     }
 
     .legal-content h1 {
-        font-size: 1.8rem;
+        font-size: 1.7rem;
     }
 
     .legal-content h2 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+    }
+    
+    .legal-content p, .legal-content li {
+        font-size: 0.9rem;
     }
 
     .legal-hero .hero-background {
         background-size: 100% 100%, 60%;
+    }
+}
+
+@media (max-width: 576px) {
+    .legal-hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .legal-hero p {
+        font-size: 0.75rem;
+    }
+    
+    .legal-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .legal-content h2 {
+        font-size: 1.2rem;
+    }
+    
+    .legal-content p, .legal-content li {
+        font-size: 0.8rem;
     }
 }
 

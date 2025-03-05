@@ -375,6 +375,14 @@
         line-height: 1.4;
     }
     
+    .projects-hero .hero-features {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.8rem;
+        margin-bottom: 1rem;
+    }
+    
     .projects-hero .hero-features span {
         font-size: 0.8rem;
     }
@@ -406,6 +414,14 @@
     
     .projects-hero .hero-content p {
         font-size: 0.75rem;
+    }
+    
+    .projects-hero .hero-features {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.8rem;
+        margin-bottom: 1rem;
     }
     
     .projects-hero .hero-features span {

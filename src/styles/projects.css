@@ -412,7 +412,7 @@
 /* Actualizar la imagen de fondo para la sección hero-projects con un tamaño mayor */
 .projects-hero .hero-background {
     background-image: linear-gradient(rgba(99, 102, 241, 0.8), rgba(79, 70, 229, 0.8)), url("../assets/9906016.jpg") !important;
-    background-size: 100% 100%, 40% !important; /* Aumentado de 40% a 60% */
+    background-size: 100% 100%, 40% !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
     z-index: 0;
@@ -430,4 +430,28 @@
 .project-card:nth-child(5),
 .project-card:nth-child(6) {
     animation-delay: 0s;
+}
+
+@media (max-width: 1200px) {
+    .projects-hero .hero-background {
+        background-size: 100% 100%, 45% !important;
+    }
+}
+
+@media (max-width: 992px) {
+    .projects-hero .hero-background {
+        background-size: 100% 100%, 50% !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-hero .hero-background {
+        background-size: 100% 100%, 55% !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .projects-hero .hero-background {
+        background-size: 100% 100%, 60% !important;
+    }
 }

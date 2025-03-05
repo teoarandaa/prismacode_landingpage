@@ -117,10 +117,15 @@
     .legal-content h2 {
         font-size: 1.25rem;
     }
+
+    .legal-hero .hero-background {
+        background-size: 100% 100%, 60%;
+    }
 }
 
 /* Estilo específico para la página de privacidad */
-.privacy-hero .hero-background {
+.privacy-hero .hero-background,
+.terms-hero .hero-background {
     background-image: 
         linear-gradient(rgba(99, 102, 241, 0.8), rgba(79, 70, 229, 0.8)), 
         url('../assets/6198268.jpg');
@@ -129,12 +134,30 @@
     background-repeat: no-repeat;
 }
 
-/* Estilo específico para la página de términos */
-.terms-hero .hero-background {
-    background-image: 
-        linear-gradient(rgba(99, 102, 241, 0.8), rgba(79, 70, 229, 0.8)), 
-        url('../assets/6852558.jpg');
-    background-size: 100% 100%, 40%;
-    background-position: center;
-    background-repeat: no-repeat;
+@media (max-width: 1200px) {
+    .privacy-hero .hero-background,
+    .terms-hero .hero-background {
+        background-size: 100% 100%, 45%;
+    }
+}
+
+@media (max-width: 992px) {
+    .privacy-hero .hero-background,
+    .terms-hero .hero-background {
+        background-size: 100% 100%, 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .privacy-hero .hero-background,
+    .terms-hero .hero-background {
+        background-size: 100% 100%, 55%;
+    }
+}
+
+@media (max-width: 576px) {
+    .privacy-hero .hero-background,
+    .terms-hero .hero-background {
+        background-size: 100% 100%, 60%;
+    }
 } 

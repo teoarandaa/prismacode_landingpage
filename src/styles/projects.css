@@ -1,10 +1,6 @@
 /* Estilos específicos para la página de proyectos */
 
 /* Reutilizamos las clases de hero de index.html */
-.projects-hero {
-    /* No necesitamos definir estilos adicionales aquí ya que 
-       estamos usando la clase .hero de main.css */
-}
 
 /* Projects section */
 .projects {

@@ -1493,4 +1493,102 @@ footer {
         margin-right: auto;
         transform: translateX(-10%);
     }
+}
+
+/* Estilos para la sección de Partnership */
+.partnership {
+    padding: 6rem 2rem;
+    background-color: #f8f9fa;
+}
+
+.partnership h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.partnership .section-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #64748b;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.partnership-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.partner-card {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.partner-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(99, 102, 241, 0.15);
+}
+
+.partner-card img {
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+    padding: 2rem;
+}
+
+.partner-info {
+    padding: 2rem;
+    flex: 1;
+}
+
+.partner-info h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.partner-info p {
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.partner-link {
+    display: inline-flex;
+    align-items: center;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    gap: 0.5rem;
+}
+
+.partner-link:hover {
+    color: var(--secondary-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .partner-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .partner-card img {
+        width: 150px;
+        padding: 2rem 2rem 0 2rem;
+    }
+    
+    .partner-info {
+        padding: 1.5rem;
+    }
 } 

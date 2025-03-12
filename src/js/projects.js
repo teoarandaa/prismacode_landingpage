@@ -62,7 +62,7 @@ class ProjectManager {
             
             projectCard.innerHTML = `
                 <div class="project-image">
-                    <img src="${project.image}" alt="${project.title}">
+                    <img src="${project.image}" alt="${project.alt || project.title}" loading="lazy">
                     <div class="project-overlay">
                         <a href="${projectUrl}" class="project-link" target="_blank" rel="noopener noreferrer">
                             <i class="fas fa-external-link-alt"></i>
@@ -264,7 +264,7 @@ async function loadAllProjects() {
             
             projectCard.innerHTML = `
                 <div class="project-img">
-                    <img src="${project.image}" alt="${project.title}">
+                    <img src="${project.image}" alt="${project.title}" loading="lazy">
                 </div>
                 <div class="project-info">
                     <h3>${project.title}</h3>
@@ -337,4 +337,24 @@ function getTagsFromCategories(categoriesString) {
     
     return categoriesString.split(',')
         .map(category => categoriesMap[category] || category);
+}
+
+function createProjectCard(project) {
+    return `
+        <div class="project-card" data-categories="${project.categories}">
+            <div class="project-image">
+                <img src="${project.image}" alt="${project.alt || project.title}" loading="lazy">
+            </div>
+            <div class="project-content">
+                <h3>${project.title}</h3>
+                <p>${project.description}</p>
+                <div class="project-tags">
+                    ${project.tags.map(tag => `<span class="project-tag">${tag}</span>`).join('')}
+                </div>
+                <div class="project-actions">
+                    <a href="${project.url}" class="project-cta" target="_blank" rel="noopener">Ver proyecto</a>
+                </div>
+            </div>
+        </div>
+    `;
 } 

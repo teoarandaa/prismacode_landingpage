@@ -2,26 +2,30 @@
     "projects": [
         {
             "title": "BusinessManager",
-            "description": "Página web y aplicación móvil nativa de IOS desarrollada en Swift para gestión de departamentos con seguimiento en tiempo real.",
+            "description": "Página web y aplicación móvil nativa de IOS desarrollada en Swift para gestión de departamentos con seguimiento en tiempo real. Optimiza procesos empresariales y mejora la productividad.",
             "image": "assets/businessmanager_logo.png",
             "categories": "web,app,design",
-            "tags": ["Web", "Aplicación Móvil", "Diseño UX/UI"],
-            "url": "https://businessmanagerweb.netlify.app"
+            "tags": ["Web", "Aplicación Móvil", "Diseño UX/UI", "Swift", "Gestión Empresarial"],
+            "url": "https://businessmanagerweb.netlify.app",
+            "alt": "BusinessManager - Aplicación de gestión empresarial con seguimiento en tiempo real"
         },
         {
             "title": "Sabbath",
-            "description": "Página de evento del juego Second Life dedicado a la temática gótica. Diseñado para ofrecer una experiencia inmersiva centrada en la venta de elementos dentro del juego",
+            "description": "Página de evento del juego Second Life dedicado a la temática gótica. Diseñado para ofrecer una experiencia inmersiva centrada en la venta de elementos dentro del juego. Incluye galería de productos y sistema de reservas.",
             "image": "assets/sabbath_logo.png",
             "categories": "web,design",
-            "tags": ["Web", "Diseño UX/UI"],
-            "url": "https://sabbathsl.com"
-        },{
+            "tags": ["Web", "Diseño UX/UI", "E-commerce", "Experiencia Inmersiva"],
+            "url": "https://sabbathsl.com",
+            "alt": "Sabbath - Plataforma de eventos góticos para Second Life con tienda virtual"
+        },
+        {
             "title": "Los Santos Sheriff Department",
-            "description": "Página de información para un departamento de seguridad de Los Santos en el juego GTA V. Encargada de mantener la seguridad de la ciudad y de los jugadores.",
+            "description": "Página de información para un departamento de seguridad de Los Santos en el juego GTA V. Encargada de mantener la seguridad de la ciudad y de los jugadores. Incluye sistema de reportes y gestión de personal.",
             "image": "assets/oasislssd_logo.jpeg",
             "categories": "web,design",
-            "tags": ["Web", "Diseño UX/UI"],
-            "url": "https://lssd.netlify.app"
+            "tags": ["Web", "Diseño UX/UI", "Sistema de Gestión", "Comunidad Gaming"],
+            "url": "https://lssd.netlify.app",
+            "alt": "LSSD - Portal oficial del departamento de seguridad de Los Santos en GTA V"
         }
     ]
 } 

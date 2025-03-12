@@ -3,33 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prisma - Desarrollo Software a Medida</title>
+    <title>Prisma - Desarrollo Web y Aplicaciones Móviles Profesionales</title>
+    <meta name="description" content="Agencia de desarrollo web y aplicaciones móviles. Creamos soluciones digitales personalizadas para impulsar tu negocio con tecnologías modernas.">
+    <meta name="keywords" content="desarrollo web, aplicaciones móviles, diseño UX/UI, Swift, Kotlin, Flutter, HTML5, CSS3, JavaScript">
+    <meta name="author" content="Prisma">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://tudominio.com/">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tudominio.com/">
+    <meta property="og:title" content="Prisma - Desarrollo Web y Aplicaciones Móviles Profesionales">
+    <meta property="og:description" content="Agencia de desarrollo web y aplicaciones móviles. Creamos soluciones digitales personalizadas para impulsar tu negocio.">
+    <meta property="og:image" content="https://tudominio.com/assets/og-image.jpg">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://tudominio.com/">
+    <meta property="twitter:title" content="Prisma - Desarrollo Web y Aplicaciones Móviles Profesionales">
+    <meta property="twitter:description" content="Agencia de desarrollo web y aplicaciones móviles. Creamos soluciones digitales personalizadas para impulsar tu negocio.">
+    <meta property="twitter:image" content="https://tudominio.com/assets/og-image.jpg">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/animations.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://unpkg.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://unpkg.com">
 </head>
 <body>
     <nav class="navbar">
         <div class="logo">PRISMA</div>
-        <button class="hamburger">
+        <button class="hamburger" aria-label="Menú de navegación">
             <span></span>
             <span></span>
             <span></span>
         </button>
         <div class="nav-links">
-            <a href="#home">Inicio</a>
-            <a href="projects.html">Proyectos</a>
-            <a href="#pricing">Precios</a>
-            <a href="mailto:contact@prismadevbackoffice.com?subject=Consulta%20sobre%20servicios%20digitales&body=Hola%20equipo%20de%20Prisma%2C%0A%0AMe%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios.%0A%0A¡Gracias!" class="contact-btn">Contactar</a>
+            <a href="index.html#home" title="Inicio - Prisma Desarrollo Web">Inicio</a>
+            <a href="projects.html" title="Portafolio de proyectos de desarrollo">Proyectos</a>
+            <a href="index.html#pricing" title="Precios de servicios de desarrollo">Precios</a>
+            <a href="mailto:contact@prismadevbackoffice.com" class="contact-btn" title="Contactar con Prisma">Contactar</a>
         </div>
     </nav>
 
     <section id="home" class="hero">
         <div class="hero-background"></div>
         <div class="hero-content">
-            <h1 data-aos="fade-up" data-aos-delay="100">Transformamos Ideas en Soluciones Digitales</h1>
+            <h1 data-aos="fade-up" data-aos-delay="100">Soluciones digitales para impulsar tu negocio</h1>
             <p data-aos="fade-up" data-aos-delay="200">Creamos aplicaciones y sistemas personalizados que automatizan procesos, mejoran la experiencia de tus clientes y potencian el crecimiento de tu negocio. Nuestras soluciones tecnológicas están diseñadas para adaptarse perfectamente a tus necesidades específicas.</p>
             <div class="hero-features" data-aos="fade-up" data-aos-delay="300">
                 <span><i class="fas fa-check-circle"></i> Desarrollo ágil</span>
@@ -498,5 +519,29 @@
     </div>
 
     <script src="js/main.js"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Prisma",
+      "url": "https://tudominio.com",
+      "logo": "https://tudominio.com/assets/logo.png",
+      "description": "Agencia de desarrollo web y aplicaciones móviles. Creamos soluciones digitales personalizadas para impulsar tu negocio.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "ES"
+      },
+      "email": "contact@prismadevbackoffice.com",
+      "sameAs": [
+        "https://twitter.com/prismadev",
+        "https://www.linkedin.com/company/prismadev",
+        "https://github.com/prismadev"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "description": "Servicios de desarrollo web y aplicaciones móviles"
+      }
+    }
+    </script>
 </body>
 </html> 

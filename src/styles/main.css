@@ -981,6 +981,10 @@ footer {
     background-color: #000000; /* Color negro para Next.js */
 }
 
+.tech-card:nth-child(9) .tech-card-back {
+    background-color: #3178C6; /* Color azul característico de TypeScript */
+}
+
 .tech-card.active .tech-card-front {
     transform: translateY(-100%);
     opacity: 0;
@@ -1032,6 +1036,17 @@ footer {
     width: 42px;
     height: 42px;
     fill: #000000;
+    margin-bottom: 1.2rem;
+    margin-top: 0.3rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tech-card-front .typescript-icon {
+    width: 42px;
+    height: 42px;
+    fill: #3178C6;
     margin-bottom: 1.2rem;
     margin-top: 0.3rem;
     display: block;

@@ -1029,10 +1029,14 @@ footer {
 }
 
 .tech-card-front .nextjs-icon {
-    width: 48px;
-    height: 48px;
+    width: 42px;
+    height: 42px;
     fill: #000000;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
+    margin-top: 0.3rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .tech-card-front .fa-html5 { color: #E34F26; }

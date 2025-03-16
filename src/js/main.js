@@ -293,7 +293,7 @@ function loadProjects() {
                     <div class="carousel-slide">
                         <div class="project-card">
                             <div class="project-img">
-                                <img src="${project.image}" alt="${project.title}">
+                                <img src="${project.image}" alt="${project.title} - Proyecto de Prisma Developments" loading="lazy">
                             </div>
                             <div class="project-info">
                                 <h3>${project.title}</h3>

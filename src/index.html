@@ -2,12 +2,12 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>Prisma Developments | Desarrollo Web y Aplicaciones Móviles Profesionales</title>
     
     <!-- SEO Mejorado -->
     <meta name="og:site_name" content="Prisma Developments">
-    <meta name="description" content="Prisma Developments: Expertos en desarrollo web, aplicaciones móviles y soluciones digitales personalizadas para empresas. Transformamos ideas en experiencias digitales excepcionales con tecnologías innovadoras.">
+    <meta name="description" content="Prisma Developments: Expertos en desarrollo web, aplicaciones móviles y soluciones digitales personalizadas para empresas. Transformamos ideas en experiencias digitales excepcionales con tecnologías innovadoras y precios competitivos.">
     <meta name="keywords" content="Prisma Developments, Prisma software, Prisma desarrollo, Prisma development, desarrollo web, web development, aplicaciones móviles, mobile applications, apps, soluciones digitales, digital solutions, desarrollo de software, software development, programación, programming, coding, diseño web, web design, transformación digital, digital transformation, UX/UI, e-commerce, cloud computing, computación en la nube, desarrollo ágil, fast development, React, Angular, HTML, CSS, JavaScript, Flutter, Laravel, Kotlin, Node.js, Swift, Next.js">
     <meta name="author" content="Prisma Developments">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
@@ -22,7 +22,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://prismadev.com/">
     <meta property="og:title" content="Prisma Developments | Desarrollo Web y Aplicaciones Móviles Profesionales">
-    <meta property="og:description" content="Agencia especializada en desarrollo web y aplicaciones móviles. Creamos soluciones digitales personalizadas para impulsar tu negocio.">
+    <meta property="og:description" content="Expertos en desarrollo web, aplicaciones móviles y soluciones digitales personalizadas para empresas. Transformamos ideas en experiencias digitales excepcionales.">
     <meta property="og:image" content="https://prismadev.com/assets/og-image.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -32,8 +32,8 @@
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://prismadev.com/">
-    <meta property="twitter:title" content="Prisma Developments | Desarrollo Web y Aplicaciones Móviles Profesionales">
-    <meta property="twitter:description" content="Agencia especializada en desarrollo web y aplicaciones móviles. Creamos soluciones digitales personalizadas para impulsar tu negocio.">
+    <meta property="twitter:title" content="Prisma Developments | Desarrollo Web y Aplicaciones Móviles">
+    <meta property="twitter:description" content="Expertos en desarrollo web, aplicaciones móviles y soluciones digitales personalizadas para empresas.">
     <meta property="twitter:image" content="https://prismadev.com/assets/og-image.jpg">
     <meta name="twitter:creator" content="@PrismaDevs">
     
@@ -67,10 +67,21 @@
     <link rel="preconnect" href="https://unpkg.com">
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
     <link rel="dns-prefetch" href="https://unpkg.com">
+    
+    <!-- Preload critical fonts -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style">
+    <link rel="preload" href="assets/logo.png" as="image" fetchpriority="high">
+    
+    <!-- Preload critical CSS -->
+    <link rel="preload" href="styles/main.css" as="style">
 </head>
 <body>
     <nav class="navbar">
-        <div class="logo">PRISMA</div>
+        </html> 
+        <div class="logo">
+            <img src="assets/logo.png" alt="Logo de Prisma Developments" width="50" height="50" loading="lazy">
+        </div>
+        <!-- <div class="logo">PRISMA</div> -->
         <button class="hamburger" aria-label="Menú de navegación">
             <span></span>
             <span></span>
@@ -85,14 +96,14 @@
     </nav>
 
     <section id="home" class="hero">
-        <div class="hero-background"></div>
+        <div class="hero-background" aria-label="Fondo decorativo de la página principal"></div>
         <div class="hero-content">
             <h1 data-aos="fade-up" data-aos-delay="100">Soluciones digitales para impulsar tu negocio</h1>
             <p data-aos="fade-up" data-aos-delay="200">Creamos aplicaciones y sistemas personalizados que automatizan procesos, mejoran la experiencia de tus clientes y potencian el crecimiento de tu negocio. Nuestras soluciones tecnológicas están diseñadas para adaptarse perfectamente a tus necesidades específicas.</p>
             <div class="hero-features" data-aos="fade-up" data-aos-delay="300">
-                <span><i class="fas fa-check-circle"></i> Desarrollo ágil</span>
-                <span><i class="fas fa-check-circle"></i> Diseño centrado en usuario</span>
-                <span><i class="fas fa-check-circle"></i> Soporte continuo</span>
+                <span><i class="fas fa-check-circle" aria-hidden="true"></i> Desarrollo ágil</span>
+                <span><i class="fas fa-check-circle" aria-hidden="true"></i> Diseño centrado en usuario</span>
+                <span><i class="fas fa-check-circle" aria-hidden="true"></i> Soporte continuo</span>
             </div>
             <div class="hero-cta" data-aos="fade-up" data-aos-delay="400">
                 <a href="mailto:contact@prismadevbackoffice.com?subject=Consulta%20sobre%20proyecto%20digital&body=Hola%20equipo%20de%20Prisma%2C%0A%0AMe%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios.%0A%0ATipo%20de%20proyecto%3A%0APresupuesto%20estimado%3A%0APlazos%20deseados%3A%0A%0A¡Gracias!" 
@@ -108,7 +119,7 @@
         <div class="benefits-grid">
             <div class="benefit-card" data-aos="fade-up" data-aos-delay="100">
                 <div class="benefit-icon">
-                    <i class="fas fa-chart-line"></i>
+                    <i class="fas fa-chart-line" aria-hidden="true"></i>
                 </div>
                 <h3>Mayor alcance</h3>
                 <p>Llega a nuevos clientes y mercados sin limitaciones geográficas.</p>
@@ -116,7 +127,7 @@
             </div>
             <div class="benefit-card" data-aos="fade-up" data-aos-delay="200">
                 <div class="benefit-icon">
-                    <i class="fas fa-cogs"></i>
+                    <i class="fas fa-cogs" aria-hidden="true"></i>
                 </div>
                 <h3>Automatización</h3>
                 <p>Optimiza procesos y reduce costes operativos con soluciones digitales.</p>
@@ -124,7 +135,7 @@
             </div>
             <div class="benefit-card" data-aos="fade-up" data-aos-delay="300">
                 <div class="benefit-icon">
-                    <i class="fas fa-users"></i>
+                    <i class="fas fa-users" aria-hidden="true"></i>
                 </div>
                 <h3>Mejor experiencia</h3>
                 <p>Ofrece a tus clientes una experiencia personalizada y satisfactoria.</p>
@@ -132,7 +143,7 @@
             </div>
             <div class="benefit-card" data-aos="fade-up" data-aos-delay="400">
                 <div class="benefit-icon">
-                    <i class="fas fa-chart-pie"></i>
+                    <i class="fas fa-chart-pie" aria-hidden="true"></i>
                 </div>
                 <h3>Datos y análisis</h3>
                 <p>Toma decisiones basadas en datos reales sobre tu negocio y clientes.</p>
@@ -246,7 +257,7 @@
             <div class="other-services-grid">
                 <div class="other-service-card" data-aos="fade-up" data-aos-delay="400">
                     <div class="service-icon">
-                        <i class="fas fa-brain"></i>
+                        <i class="fas fa-brain" aria-hidden="true"></i>
                     </div>
                     <h4>Inteligencia Artificial</h4>
                     <p>La llegada de la IA generativa amplía el alcance del aprendizaje automático y la IA tradicionales.</p>
@@ -255,7 +266,7 @@
                 
                 <div class="other-service-card" data-aos="fade-up" data-aos-delay="450">
                     <div class="service-icon">
-                        <i class="fas fa-cloud"></i>
+                        <i class="fas fa-cloud" aria-hidden="true"></i>
                     </div>
                     <h4>Cloud</h4>
                     <p>Tu empresa tiene un propósito único y un camino de crecimiento propio. Por eso, necesitas una estrategia en la nube diferenciada para alcanzar el éxito.</p>
@@ -264,7 +275,7 @@
                 
                 <div class="other-service-card" data-aos="fade-up" data-aos-delay="500">
                     <div class="service-icon">
-                        <i class="fas fa-comments"></i>
+                        <i class="fas fa-comments" aria-hidden="true"></i>
                     </div>
                     <h4>Consultoría</h4>
                     <p>El panorama empresarial actual exige nuevas estrategias, tecnologías e innovación a nivel empresarial.</p>
@@ -273,7 +284,7 @@
                 
                 <div class="other-service-card" data-aos="fade-up" data-aos-delay="550">
                     <div class="service-icon">
-                        <i class="fas fa-shield-alt"></i>
+                        <i class="fas fa-shield-alt" aria-hidden="true"></i>
                     </div>
                     <h4>Ciberseguridad</h4>
                     <p>Con la expansión de los perímetros de amenaza en el mundo digital, la ciberseguridad ya no es solo una cuestión de cumplimiento y mitigación de riesgos, sino una necesidad para el crecimiento.</p>
@@ -282,7 +293,7 @@
                 
                 <div class="other-service-card" data-aos="fade-up" data-aos-delay="600">
                     <div class="service-icon">
-                        <i class="fas fa-chart-bar"></i>
+                        <i class="fas fa-chart-bar" aria-hidden="true"></i>
                     </div>
                     <h4>Datos y Análisis</h4>
                     <p>Los datos están en el corazón de la transformación empresarial. Nuestras soluciones brindan información que te ayuda a desarrollar nuevos productos y servicios.</p>
@@ -291,7 +302,7 @@
                 
                 <div class="other-service-card" data-aos="fade-up" data-aos-delay="650">
                     <div class="service-icon">
-                        <i class="fas fa-briefcase"></i>
+                        <i class="fas fa-briefcase" aria-hidden="true"></i>
                     </div>
                     <h4>Soluciones para Negocios</h4>
                     <p>Las aplicaciones empresariales son la columna vertebral de los negocios en la actualidad. La transformación digital requiere un enfoque holístico con soluciones inteligentes.</p>
@@ -332,7 +343,7 @@
             <div class="tech-card" data-aos="zoom-in" data-aos-delay="100">
                 <div class="tech-card-inner">
                     <div class="tech-card-front">
-                        <i class="fab fa-html5"></i>
+                        <i class="fab fa-html5" aria-hidden="true"></i>
                         <h3>HTML5</h3>
                     </div>
                     <div class="tech-card-back">
@@ -344,7 +355,7 @@
             <div class="tech-card" data-aos="zoom-in" data-aos-delay="200">
                 <div class="tech-card-inner">
                     <div class="tech-card-front">
-                        <i class="fab fa-css3-alt"></i>
+                        <i class="fab fa-css3-alt" aria-hidden="true"></i>
                         <h3>CSS3</h3>
                     </div>
                     <div class="tech-card-back">
@@ -356,7 +367,7 @@
             <div class="tech-card" data-aos="zoom-in" data-aos-delay="300">
                 <div class="tech-card-inner">
                     <div class="tech-card-front">
-                        <i class="fab fa-js"></i>
+                        <i class="fab fa-js" aria-hidden="true"></i>
                         <h3>JavaScript</h3>
                     </div>
                     <div class="tech-card-back">
@@ -368,7 +379,7 @@
             <div class="tech-card" data-aos="zoom-in" data-aos-delay="400">
                 <div class="tech-card-inner">
                     <div class="tech-card-front">
-                        <i class="fab fa-laravel"></i>
+                        <i class="fab fa-laravel" aria-hidden="true"></i>
                         <h3>Laravel</h3>
                     </div>
                     <div class="tech-card-back">
@@ -380,7 +391,7 @@
             <div class="tech-card" data-aos="zoom-in" data-aos-delay="500">
                 <div class="tech-card-inner">
                     <div class="tech-card-front">
-                        <svg class="flutter-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <svg class="flutter-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-label="Logo de Flutter" role="img">
                             <path d="M429.5 236.3L291.7 374.1 429.5 512H272l-59.1-59.1-78.8-78.8L272 236.3H429.5zM272 0L16 256l78.8 78.8L429.5 0H272z"/>
                         </svg>
                         <h3>Flutter</h3>
@@ -394,7 +405,7 @@
             <div class="tech-card" data-aos="zoom-in" data-aos-delay="600">
                 <div class="tech-card-inner">
                     <div class="tech-card-front">
-                        <i class="fab fa-android"></i>
+                        <i class="fab fa-android" aria-hidden="true"></i>
                         <h3>Kotlin</h3>
                     </div>
                     <div class="tech-card-back">
@@ -406,7 +417,7 @@
             <div class="tech-card" data-aos="zoom-in" data-aos-delay="700">
                 <div class="tech-card-inner">
                     <div class="tech-card-front">
-                        <svg class="swift-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <svg class="swift-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-label="Logo de Swift" role="img">
                             <path d="M448 156.1c0-4.5-.1-9-.2-13.5a196.3 196.3 0 0 0 -2.6-29.4 99.6 99.6 0 0 0 -9.2-28A94.1 94.1 0 0 0 394.8 44a99.2 99.2 0 0 0 -28-9.2 195 195 0 0 0 -29.4-2.6c-4.5-.1-9-.2-13.5-.2H124.1c-4.5 0-9 .1-13.5 .2-2.5 .1-4.9 .2-7.4 .3a171.7 171.7 0 0 0 -22.1 2.3 103.1 103.1 0 0 0 -21.2 6.1q-3.5 1.5-6.8 3.1a94.7 94.7 0 0 0 -18.4 12.3c-1.9 1.6-3.7 3.3-5.4 5A93.9 93.9 0 0 0 12 85.2a99.5 99.5 0 0 0 -9.2 28 196.3 196.3 0 0 0 -2.5 29.4c-.1 4.5-.2 9-.2 13.5v199.8c0 4.5 .1 9 .2 13.5a196.1 196.1 0 0 0 2.6 29.4 99.3 99.3 0 0 0 9.2 28A94.3 94.3 0 0 0 53.2 468a99.5 99.5 0 0 0 28 9.2 195 195 0 0 0 29.4 2.6c4.5 .1 9 .2 13.5 .2H323.9c4.5 0 9-.1 13.5-.2a196.6 196.6 0 0 0 29.4-2.6 99.6 99.6 0 0 0 28-9.2A94.2 94.2 0 0 0 436 426.8a99.3 99.3 0 0 0 9.2-28 194.8 194.8 0 0 0 2.6-29.4c.1-4.5 .2-9 .2-13.5V172.1c0-5.4 0-10.7 0-16.1zm-69.9 241c-20-38.9-57.2-29.3-76.3-19.5-1.7 1-3.5 2-5.3 3l-.4 .3c-39.5 21-92.5 22.5-145.9-.4A234.6 234.6 0 0 1 45 290.1a230.6 230.6 0 0 0 39.2 23.4c56.4 26.4 113 24.5 153 0-57-43.9-104.6-101-141.1-147.2a197.1 197.1 0 0 1 -18.8-25.9c43.7 40 112.7 90.2 137.5 104.1-52.6-55.5-98.9-123.9-96.7-121.7 82.8 83.4 159.2 130.6 159.2 130.6 2.9 1.6 5 2.9 6.7 4a127.4 127.4 0 0 0 4.2-12.5c13.2-48.3-1.7-103.6-35.3-149.2C329.6 141.8 375 229.3 356.4 303.4c-.4 1.7-1 3.4-1.4 5.1 38.5 47.4 28 98.2 23.1 88.6z"/>
                         </svg>
                         <h3>Swift</h3>
@@ -420,8 +431,8 @@
             <div class="tech-card" data-aos="zoom-in" data-aos-delay="800">
                 <div class="tech-card-inner">
                     <div class="tech-card-front">
-                        <svg class="nextjs-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="42" height="42">
-                            <path d="M11.572 0c-.176 0-.31.001-.358.007a19.76 19.76 0 0 0 -.364.033C7.443.346 4.25 2.185 2.228 5.012a11.875 11.875 0 0 0-2.119 5.243c-.096.659-.108.854-.108 1.747s.012 1.089.108 1.748c.652 4.506 3.86 8.292 8.209 9.695.779.25 1.6.422 2.534.525.363.04 1.935.04 2.299 0 1.611-.178 2.977-.577 4.323-1.264.207-.106.247-.134.219-.158-.02-.013-.9-1.193-1.955-2.62l-1.919-2.592-2.404-3.558a338.739 338.739 0 0 0-2.422-3.556c-.009-.002-.018 1.579-.023 3.51-.007 3.38-.01 3.515-.052 3.595a.426.426 0 0 1-.206.214c-.075.037-.14.044-.495.044H7.81l-.108-.068a.438.438 0 0 1-.157-.171l-.05-.106.006-4.703.007-4.705.072-.092a.645.645 0 0 1 .174-.143c.096-.047.134-.051.54-.051.478 0 .558.018.682.154.035.038 1.337 1.999 2.895 4.361a10760.433 10760.433 0 0 0 4.735 7.17l1.9 2.879.096-.063a12.317 12.317 0 0 0 2.466-2.163 11.944 11.944 0 0 0 2.824-6.134c.096-.66.108-.854.108-1.748 0-.893-.012-1.088-.108-1.747-.652-4.506-3.859-8.292-8.208-9.695a12.597 12.597 0 0 0-2.499-.523A33.119 33.119 0 0 0 11.573 0zm4.069 7.217c.347 0 .408.005.486.047a.473.473 0 0 1 .237.277c.018.06.023 1.365.018 4.304l-.006 4.218-.744-1.14-.746-1.14v-3.066c0-1.982.01-3.097.023-3.15a.478.478 0 0 1 .233-.296c.096-.05.13-.054.5-.054z"/>
+                        <svg class="nextjs-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="42" height="42" aria-label="Logo de Next.js" role="img">
+                            <path d="M11.572 0c-.176 0-.31.001-.358.007a19.76 19.76 0 0 0 -.364.033C7.443.346 4.25 2.185 2.228 5.012a11.875 11.875 0 0 0-2.119 5.243c-.096.659-.108.854-.108 1.747s.012 1.089.108 1.748c.652 4.506 3.86 8.292 8.209 9.695.779.25 1.6.422 2.534.525.363.04 1.935.04 2.299 0 1.611-.178 2.977-.577 4.323-1.264.207-.106.247-.134.219-.158-.02-.013-.9-1.193-1.955-2.62l-1.919-2.592-2.404-3.558a338.739 338.739 0 0 0-2.422-3.556c-.009-.002-.018 1.579-.023 3.51-.007 3.38-.01 3.515-.052 3.595a.426.426 0 0 1-.206.214c-.075.037-.14.044-.495.044H7.81l-.108-.068a.438.438 0 0 1-.157-.171l-.05-.106.006-4.703.007-4.705.072-.092a.645.645 0 0 1 .174-.143c.096-.047.134-.051.5-.051.478 0 .558.018.682.154.035.038 1.337 1.999 2.895 4.361a10760.433 10760.433 0 0 0 4.735 7.17l1.9 2.879.096-.063a12.317 12.317 0 0 0 2.466-2.163 11.944 11.944 0 0 0 2.824-6.134c.096-.66.108-.854.108-1.748 0-.893-.012-1.088-.108-1.747-.652-4.506-3.859-8.292-8.292-8.208-9.695a12.597 12.597 0 0 0-2.499-.523A33.119 33.119 0 0 0 11.573 0zm4.069 7.217c.347 0 .408.005.486.047a.473.473 0 0 1 .237.277c.018.06.023 1.365.018 4.304l-.006 4.218-.744-1.14-.746-1.14v-3.066c0-1.982.01-3.097.023-3.15a.478.478 0 0 1 .233-.296c.096-.05.13-.054.5-.054z"/>
                         </svg>
                         <h3>Next.js</h3>
                     </div>
@@ -434,8 +445,8 @@
             <div class="tech-card" data-aos="zoom-in" data-aos-delay="900">
                 <div class="tech-card-inner">
                     <div class="tech-card-front">
-                        <svg class="typescript-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="42" height="42">
-                            <path d="M1.125 0C.502 0 0 .502 0 1.125v21.75C0 23.498.502 24 1.125 24h21.75c.623 0 1.125-.502 1.125-1.125V1.125C24 .502 23.498 0 22.875 0zm17.363 9.75c.612 0 1.154.037 1.627.111a6.38 6.38 0 0 1 1.306.34v2.458a3.95 3.95 0 0 0-.643-.361 5.093 5.093 0 0 0-.717-.26 5.453 5.453 0 0 0-1.426-.2c-.3 0-.573.028-.819.086a2.1 2.1 0 0 0-.623.242c-.17.104-.3.229-.393.374a.888.888 0 0 0-.14.49c0 .196.053.373.156.529.104.156.252.304.443.444s.423.276.696.41c.273.135.582.274.926.416.47.197.892.407 1.266.628.374.222.695.473.963.753.268.279.472.598.614.957.142.359.214.776.214 1.253 0 .657-.125 1.21-.373 1.656a3.033 3.033 0 0 1-1.012 1.085 4.38 4.38 0 0 1-1.487.596c-.566.12-1.163.18-1.79.18a9.916 9.916 0 0 1-1.84-.164 5.544 5.544 0 0 1-1.512-.493v-2.63a5.033 5.033 0 0 0 3.237 1.2c.333 0 .624-.03.872-.09.249-.06.456-.144.623-.25.166-.108.29-.234.373-.38a1.023 1.023 0 0 0-.074-1.089 2.12 2.12 0 0 0-.537-.5 5.597 5.597 0 0 0-.807-.444 27.72 27.72 0 0 0-1.007-.436c-.918-.383-1.602-.852-2.053-1.405-.45-.553-.676-1.222-.676-2.005 0-.614.123-1.141.369-1.582.246-.441.58-.804 1.004-1.089a4.494 4.494 0 0 1 1.47-.629 7.536 7.536 0 0 1 1.77-.201zm-15.113.188h9.563v2.166H9.506v9.646H6.789v-9.646H3.375z"/>
+                        <svg class="typescript-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="42" height="42" aria-label="Logo de TypeScript" role="img">
+                            <path d="M1.125 0C.502 0 0 .502 0 1.125v21.75C0 23.498.502 24 1.125 24h21.75c.623 0 1.125-.502 1.125-1.125V1.125C24 .502 23.498 0 22.875 0zm17.363 9.75c.612 0 1.154.037 1.627.111a6.38 6.38 0 0 1 1.306.34v2.458a3.95 3.95 0 0 0-.643-.361 5.093 5.093 0 0 0-.717-.26 5.453 5.453 0 0 0-1.426-.2c-.3 0-.573.028-.819.086a2.1 2.1 0 0 0-.623.242c-.17.104-.3.229-.393.374a.888.888 0 0 0-.14.49c0 .196.053.373.156.529.104.156.252.304.443.444s.423.276.696.41c.273.135.582.274.926.416.47.197.892.407 1.266.628.374.222.695.473.963.753.268.279.472.598.614.957.142.359.214.776.214 1.253 0 .657-.125 1.21-.373 1.656a3.033 3.033 0 0 1-1.012 1.085 4.38 4.38 0 0 1-1.487.596c-.566.12-1.163.18-1.79.18a9.916 9.916 0 0 1-1.84-.164 5.544 5.544 0 0 1-1.512-.493v-2.63a5.033 5.033 0 0 0 3.237 1.2c.333 0 .624-.03.872-.09.249-.06.456-.144.623-.25.166-.108.29-.234.373-.38a1.023 1.023 0 0 0-.07-.4 1.137 1.137 0 0 0-.252-.33 2.12 2.12 0 0 0-.537-.5 5.597 5.597 0 0 0-.807-.444 27.72 27.72 0 0 0-1.007-.436c-.918-.383-1.602-.852-2.053-1.405-.45-.553-.676-1.222-.676-2.005 0-.614.123-1.141.369-1.582.246-.441.58-.804 1.004-1.089a4.494 4.494 0 0 1 1.47-.629 7.536 7.536 0 0 1 1.77-.201zm-15.113.188h9.563v2.166H9.506v9.646H6.789v-9.646H3.375z"/>
                         </svg>
                         <h3>TypeScript</h3>
                     </div>
@@ -596,40 +607,30 @@
       "alternateName": ["Prisma Software", "Prisma Desarrollo", "Prisma Dev"],
       "url": "https://prismadev.com",
       "logo": "https://prismadev.com/assets/logo.png",
-      "description": "Agencia especializada en desarrollo web, aplicaciones móviles y soluciones digitales personalizadas para empresas de todos los tamaños.",
+      "description": "Agencia de desarrollo web y aplicaciones móviles especializada en soluciones digitales personalizadas para empresas.",
+      "email": "contact@prismadevbackoffice.com",
+      "telephone": "+34600000000",
       "address": {
         "@type": "PostalAddress",
+        "addressLocality": "Madrid",
+        "addressRegion": "Madrid",
+        "postalCode": "28001",
         "addressCountry": "ES"
       },
-      "email": "contact@prismadevbackoffice.com",
-      "telephone": "+34671659880",
-      "foundingDate": "2024",
-      "founder": {
-        "@type": "Person",
-        "name": "Marc Fernández Mesa y Teo Aranda Páez"
-      },
-      "knowsAbout": ["Desarrollo Web", "Aplicaciones Móviles", "UX/UI", "E-commerce", "Cloud Computing", "Consultoría Digital"],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Servicios de Prisma Developments",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Desarrollo Web",
-              "description": "Creación de sitios web y aplicaciones web personalizadas con las últimas tecnologías."
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Desarrollo de Aplicaciones Móviles",
-              "description": "Diseño y desarrollo de aplicaciones nativas para iOS y Android."
-            }
-          }
-        ]
+      "sameAs": [
+        "https://twitter.com/PrismaDevs",
+        "https://www.instagram.com/prismadevs/",
+        "https://www.linkedin.com/company/prisma-developments/"
+      ],
+      "knowsLanguage": ["es", "en"],
+      "areaServed": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 40.463667,
+          "longitude": -3.74922
+        },
+        "geoRadius": "5000"
       }
     }
     </script>

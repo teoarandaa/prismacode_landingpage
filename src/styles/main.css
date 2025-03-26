@@ -900,12 +900,12 @@ footer {
 
 .tech-card {
     perspective: 1000px;
-    height: 200px;
+    height: 240px;
     cursor: pointer;
     position: relative;
     overflow: hidden;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
 }
 
@@ -929,7 +929,7 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 1.5rem;
+    padding: 2rem;
     border-radius: 8px;
     transition: all 0.4s ease;
 }
@@ -1006,15 +1006,21 @@ footer {
     line-height: 1.4;
 }
 
+.tech-card-front img {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 1.5rem;
+}
+
 .tech-card-front i, 
 .tech-card-front .flutter-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .tech-card-front .flutter-icon {
-    width: 3rem;
-    height: 3rem;
+    width: 3.5rem;
+    height: 3.5rem;
     fill: #02569B; /* Color principal de Flutter */
 }
 
@@ -1026,17 +1032,17 @@ footer {
 .tech-card-front .fa-apple { color: #000000; }
 
 .tech-card-front .swift-icon {
-    width: 3rem;
-    height: 3rem;
+    width: 3.5rem;
+    height: 3.5rem;
     fill: #FF3B30; /* Color naranja característico de Swift */
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .tech-card-front .nextjs-icon {
-    width: 42px;
-    height: 42px;
+    width: 50px;
+    height: 50px;
     fill: #000000;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.5rem;
     margin-top: 0.3rem;
     display: block;
     margin-left: auto;
@@ -1044,10 +1050,10 @@ footer {
 }
 
 .tech-card-front .typescript-icon {
-    width: 42px;
-    height: 42px;
+    width: 50px;
+    height: 50px;
     fill: #3178C6;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.5rem;
     margin-top: 0.3rem;
     display: block;
     margin-left: auto;
@@ -1804,4 +1810,9 @@ footer {
         grid-template-columns: 1fr;
         max-width: 500px;
     }
+}
+
+.tech-card-front h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
 } 

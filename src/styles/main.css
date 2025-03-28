@@ -985,6 +985,50 @@ footer {
     background-color: #3178C6; /* Color azul característico de TypeScript */
 }
 
+.tech-card:nth-child(10) .tech-card-back {
+    background-color: #FF0000; /* Color rojo para PL/SQL */
+}
+
+.tech-card:nth-child(11) .tech-card-back {
+    background-color: #3776AB; /* Color Python */
+}
+
+.tech-card:nth-child(12) .tech-card-back {
+    background-color: #4EAA25; /* Color Bash */
+}
+
+.tech-card:nth-child(13) .tech-card-back {
+    background-color: #777BB4; /* Color PHP */
+}
+
+.tech-card:nth-child(14) .tech-card-back {
+    background-color: #47A248; /* Color MongoDB */
+}
+
+.tech-card:nth-child(15) .tech-card-back {
+    background-color: #4479A1; /* Color MySQL */
+}
+
+.tech-card:nth-child(16) .tech-card-back {
+    background-color: #336791; /* Color PostgreSQL */
+}
+
+.tech-card:nth-child(17) .tech-card-back {
+    background-color: #2C2D72; /* Color Lua */
+}
+
+.tech-card:nth-child(18) .tech-card-back {
+    background-color: #512BD4; /* Color C# */
+}
+
+.tech-card:nth-child(19) .tech-card-back {
+    background-color: #007396; /* Color Java */
+}
+
+.tech-card:nth-child(20) .tech-card-back {
+    background-color: #E76F00; /* Color JavaFX */
+}
+
 .tech-card.active .tech-card-front {
     transform: translateY(-100%);
     opacity: 0;
@@ -1060,6 +1104,20 @@ footer {
 .tech-card-front .fa-laravel { color: #FF2D20; }
 .tech-card-front .fa-android { color: #3DDC84; }
 .tech-card-front .fa-apple { color: #000000; }
+
+.tech-card-front .fa-database {
+    color: #FF0000; /* Color rojo para el ícono de PL/SQL */
+}
+
+.tech-card-front .fa-python { color: #3776AB; }
+.tech-card-front .fa-terminal { color: #4EAA25; }
+.tech-card-front .fa-php { color: #777BB4; }
+.tech-card-front .fa-leaf { color: #47A248; }
+.tech-card-front .fa-database:nth-child(1) { color: #4479A1; }
+.tech-card-front .fa-elephant { color: #336791; }
+.tech-card-front .fa-moon { color: #2C2D72; }
+.tech-card-front .fa-windows { color: #512BD4; }
+.tech-card-front .fa-java { color: #007396; }
 
 .tooltip-container {
     position: relative;
@@ -1804,4 +1862,94 @@ footer {
         grid-template-columns: 1fr;
         max-width: 500px;
     }
+}
+
+/* Actualizar los estilos existentes y añadir los nuevos */
+
+.tech-logo {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform 0.3s ease;
+}
+
+/* Ajustes específicos para ciertos logos */
+.tech-card-front img[src*="python.webp"],
+.tech-card-front img[src*="mongodb.svg"] {
+    width: 48px;
+}
+
+.tech-card-front img[src*="postgresql.png"],
+.tech-card-front img[src*="mysql.png"] {
+    width: 52px;
+}
+
+/* Colores específicos para los fondos de las tarjetas */
+.tech-card:nth-child(10) .tech-card-back {
+    background-color: #FF0000; /* Color rojo para PL/SQL */
+}
+
+.tech-card:nth-child(11) .tech-card-back {
+    background-color: #3776AB; /* Python */
+}
+
+.tech-card:nth-child(12) .tech-card-back {
+    background-color: #4EAA25; /* Bash */
+}
+
+.tech-card:nth-child(13) .tech-card-back {
+    background-color: #777BB4; /* PHP */
+}
+
+.tech-card:nth-child(14) .tech-card-back {
+    background-color: #47A248; /* MongoDB */
+}
+
+.tech-card:nth-child(15) .tech-card-back {
+    background-color: #4479A1; /* MySQL */
+}
+
+.tech-card:nth-child(16) .tech-card-back {
+    background-color: #336791; /* PostgreSQL */
+}
+
+.tech-card:nth-child(17) .tech-card-back {
+    background-color: #2C2D72; /* Lua */
+}
+
+.tech-card:nth-child(18) .tech-card-back {
+    background-color: #512BD4; /* C# */
+}
+
+.tech-card:nth-child(19) .tech-card-back,
+.tech-card:nth-child(20) .tech-card-back {
+    background-color: #007396; /* Java y JavaFX */
+}
+
+/* Efectos hover para todos los logos */
+.tech-card:hover .tech-logo {
+    transform: scale(1.1);
+}
+
+/* Ajustes específicos para logos que necesiten más espacio */
+.tech-card-front img[src*="plsql.svg"] {
+    width: 46px; /* Ligeramente más grande para mejor visibilidad */
+}
+
+.tech-card-front img[src*="java.png"] {
+    width: 44px;
+}
+
+.tech-card-front img[src*="csharp.svg"] {
+    width: 44px;
+}
+
+/* Asegurar que las imágenes mantengan su calidad */
+.tech-logo {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
 } 

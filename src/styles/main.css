@@ -906,7 +906,7 @@ footer {
     overflow: hidden;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
+    transition: box-shadow 0.3s ease;
 }
 
 .tech-card-inner {
@@ -969,8 +969,7 @@ footer {
 }
 
 .tech-card:nth-child(6) .tech-card-back {
-    background-color: #3DDC84; /* Color Android */
-    color: #333; /* Texto oscuro para fondo claro */
+    background: linear-gradient(45deg, #F88909, #7F52FF, #1DA1F2);
 }
 
 .tech-card:nth-child(7) .tech-card-back {
@@ -1050,74 +1049,81 @@ footer {
     line-height: 1.4;
 }
 
-.tech-card-front i, 
-.tech-card-front .flutter-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.tech-card-front .flutter-icon {
-    width: 3rem;
-    height: 3rem;
-    fill: #02569B; /* Color principal de Flutter */
-}
-
-.tech-card-front .fa-html5 { color: #E34F26; }
-.tech-card-front .fa-css3-alt { color: #1572B6; }
-.tech-card-front .fa-js { color: #F7DF1E; }
-.tech-card-front .fa-laravel { color: #FF2D20; }
-.tech-card-front .fa-android { color: #3DDC84; }
-.tech-card-front .fa-apple { color: #000000; }
-
-.tech-card-front .swift-icon {
-    width: 3rem;
-    height: 3rem;
-    fill: #FF3B30; /* Color naranja característico de Swift */
-    margin-bottom: 1rem;
-}
-
-.tech-card-front .nextjs-icon {
+.tech-card-front i,
+.tech-card-front svg,
+.tech-card-front img,
+.tech-logo {
     width: 42px;
     height: 42px;
-    fill: #000000;
-    margin-bottom: 1.2rem;
-    margin-top: 0.3rem;
+    object-fit: contain;
+    margin-bottom: 1rem;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    image-rendering: -webkit-optimize-contrast;
 }
 
+.tech-card-front .fa-html5,
+.tech-card-front .fa-css3-alt,
+.tech-card-front .fa-js,
+.tech-card-front .fa-laravel {
+    font-size: 42px;
+    width: auto;
+    height: auto;
+}
+
+.tech-card-front img[src*="python.webp"],
+.tech-card-front img[src*="mongodb.svg"] {
+    width: 48px;
+    height: 48px;
+}
+
+.tech-card-front img[src*="postgresql.png"],
+.tech-card-front img[src*="mysql.png"] {
+    width: 52px;
+    height: 52px;
+}
+
+.tech-card-front img[src*="plsql.svg"] {
+    width: 46px;
+    height: 46px;
+}
+
+.tech-card-front img[src*="java.png"] {
+    width: 44px;
+    height: 44px;
+}
+
+.tech-card-front img[src*="csharp.svg"] {
+    width: 44px;
+    height: 44px;
+}
+
+.tech-card-front img[src*="kotlin.png"] {
+    width: 42px;
+    height: 42px;
+}
+
+.tech-card-front .flutter-icon,
+.tech-card-front .swift-icon,
+.tech-card-front .nextjs-icon,
 .tech-card-front .typescript-icon {
     width: 42px;
     height: 42px;
-    fill: #3178C6;
-    margin-bottom: 1.2rem;
-    margin-top: 0.3rem;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 
-.tech-card-front .fa-html5 { color: #E34F26; }
-.tech-card-front .fa-css3-alt { color: #1572B6; }
-.tech-card-front .fa-js { color: #F7DF1E; }
-.tech-card-front .fa-laravel { color: #FF2D20; }
-.tech-card-front .fa-android { color: #3DDC84; }
-.tech-card-front .fa-apple { color: #000000; }
-
-.tech-card-front .fa-database {
-    color: #FF0000; /* Color rojo para el ícono de PL/SQL */
+.tech-card:hover .tech-logo,
+.tech-card:hover .fa-html5,
+.tech-card:hover .fa-css3-alt,
+.tech-card:hover .fa-js,
+.tech-card:hover .fa-laravel,
+.tech-card:hover .fa-android,
+.tech-card:hover .flutter-icon,
+.tech-card:hover .swift-icon,
+.tech-card:hover .nextjs-icon,
+.tech-card:hover .typescript-icon {
+    transform: none;
 }
-
-.tech-card-front .fa-python { color: #3776AB; }
-.tech-card-front .fa-terminal { color: #4EAA25; }
-.tech-card-front .fa-php { color: #777BB4; }
-.tech-card-front .fa-leaf { color: #47A248; }
-.tech-card-front .fa-database:nth-child(1) { color: #4479A1; }
-.tech-card-front .fa-elephant { color: #336791; }
-.tech-card-front .fa-moon { color: #2C2D72; }
-.tech-card-front .fa-windows { color: #512BD4; }
-.tech-card-front .fa-java { color: #007396; }
 
 .tooltip-container {
     position: relative;
@@ -1867,25 +1873,26 @@ footer {
 /* Actualizar los estilos existentes y añadir los nuevos */
 
 .tech-logo {
-    width: 42px;
-    height: 42px;
+    width: 52px;
+    height: 52px;
     object-fit: contain;
     margin-bottom: 1rem;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    transition: transform 0.3s ease;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
 }
 
 /* Ajustes específicos para ciertos logos */
 .tech-card-front img[src*="python.webp"],
 .tech-card-front img[src*="mongodb.svg"] {
-    width: 48px;
+    width: 58px;
 }
 
 .tech-card-front img[src*="postgresql.png"],
 .tech-card-front img[src*="mysql.png"] {
-    width: 52px;
+    width: 62px;
 }
 
 /* Colores específicos para los fondos de las tarjetas */
@@ -1931,25 +1938,140 @@ footer {
 }
 
 /* Efectos hover para todos los logos */
-.tech-card:hover .tech-logo {
-    transform: scale(1.1);
+.tech-card:hover .tech-logo,
+.tech-card:hover .fa-html5,
+.tech-card:hover .fa-css3-alt,
+.tech-card:hover .fa-js,
+.tech-card:hover .fa-laravel,
+.tech-card:hover .fa-android,
+.tech-card:hover .flutter-icon,
+.tech-card:hover .swift-icon,
+.tech-card:hover .nextjs-icon,
+.tech-card:hover .typescript-icon {
+    transform: none;
+    filter: none;
 }
 
 /* Ajustes específicos para logos que necesiten más espacio */
 .tech-card-front img[src*="plsql.svg"] {
-    width: 46px; /* Ligeramente más grande para mejor visibilidad */
+    width: 56px;
 }
 
 .tech-card-front img[src*="java.png"] {
-    width: 44px;
+    width: 54px;
 }
 
 .tech-card-front img[src*="csharp.svg"] {
-    width: 44px;
+    width: 54px;
+}
+
+/* Ajustar tamaños para SVGs específicos */
+.tech-card-front .flutter-icon,
+.tech-card-front .swift-icon,
+.tech-card-front .nextjs-icon,
+.tech-card-front .typescript-icon {
+    width: 52px;
+    height: 52px;
 }
 
 /* Asegurar que las imágenes mantengan su calidad */
 .tech-logo {
     image-rendering: -webkit-optimize-contrast;
     image-rendering: crisp-edges;
+}
+
+/* Ajustar tamaño de los iconos de Font Awesome */
+.tech-card-front i,
+.tech-card-front svg {
+    width: auto;
+    height: auto;
+}
+
+/* Ajustar específicamente los iconos mencionados */
+.tech-card-front .fa-html5 { 
+    color: #E34F26; 
+    font-size: 52px;
+}
+
+.tech-card-front .fa-css3-alt { 
+    color: #1572B6; 
+    font-size: 52px;
+}
+
+.tech-card-front .fa-js { 
+    color: #F7DF1E; 
+    font-size: 52px;
+}
+
+.tech-card-front .fa-laravel { 
+    color: #FF2D20; 
+    font-size: 52px;
+}
+
+/* Estilo para el logo de Kotlin */
+.tech-card-front img[src*="kotlin.png"] {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+}
+
+/* Modificar el fondo para la tarjeta de Kotlin */
+.tech-card:nth-child(6) .tech-card-back {
+    background: linear-gradient(45deg, #F88909, #7F52FF, #1DA1F2);
+}
+
+/* Ajustar tamaños específicos para logos más grandes */
+.tech-card-front img[src*="php.png"],
+.tech-card-front img[src*="java.png"],
+.tech-card-front img[src*="lua.png"],
+.tech-card-front img[src*="csharp.svg"] {
+    width: 58px;
+    height: 58px;
+}
+
+/* Restaurar colores para los iconos */
+.tech-card-front .fa-html5 { 
+    color: #E34F26; 
+    font-size: 52px;
+}
+
+.tech-card-front .fa-css3-alt { 
+    color: #1572B6; 
+    font-size: 52px;
+}
+
+.tech-card-front .fa-js { 
+    color: #F7DF1E; 
+    font-size: 52px;
+}
+
+.tech-card-front .fa-laravel { 
+    color: #FF2D20; 
+    font-size: 52px;
+}
+
+/* Colores para los SVG */
+.tech-card-front .flutter-icon { 
+    fill: #02569B; 
+    width: 52px;
+    height: 52px;
+}
+
+.tech-card-front .swift-icon { 
+    fill: #FA7343; 
+    width: 52px;
+    height: 52px;
+}
+
+.tech-card-front .typescript-icon { 
+    fill: #3178C6; 
+    width: 52px;
+    height: 52px;
+}
+
+/* Asegurar que los iconos mantengan su tamaño y calidad */
+.tech-card-front i,
+.tech-card-front svg {
+    width: auto;
+    height: auto;
 } 

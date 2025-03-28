@@ -947,6 +947,10 @@ footer {
 }
 
 /* Colores específicos para cada tecnología */
+.tech-card:has(img[src*="plsql"]) .tech-card-back {
+    background-color: #FF0000; /* Color rojo para PL/SQL */
+}
+
 .tech-card:nth-child(1) .tech-card-back {
     background-color: #E34F26; /* Color HTML5 */
 }

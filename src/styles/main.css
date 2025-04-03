@@ -535,15 +535,54 @@ body .navbar.transparent .contact-btn {
         flex-direction: column;
         justify-content: center;
         transition: 0.3s ease;
+        z-index: 1000;
     }
 
     .nav-links.active {
         right: 0;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
     }
 
     .nav-links a {
         margin: 1rem 0;
         font-size: 1.2rem;
+        text-align: center;
+        transition: all 0.3s ease;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+    }
+    
+    /* Color morado para los enlaces del menú hamburgesa */
+    .nav-links.active a:not(.contact-btn) {
+        color: var(--primary-color) !important;
+        font-weight: 600;
+        position: relative;
+    }
+    
+    /* Añadir un pequeño efecto de subrayado al hover */
+    .nav-links.active a:not(.contact-btn):hover {
+        background-color: rgba(99, 102, 241, 0.05);
+        transform: translateY(-2px);
+    }
+    
+    /* Asegurar que los enlaces en el menú hamburguesa tengan color morado aunque el navbar sea transparente */
+    .navbar.transparent .nav-links.active a:not(.contact-btn) {
+        color: var(--primary-color) !important;
+        text-shadow: none !important;
+    }
+    
+    /* Mantener el botón de contacto con su estilo original pero centrado y más grande */
+    .nav-links.active .contact-btn {
+        background: var(--primary-color);
+        color: white !important;
+        margin-top: 1rem;
+        padding: 0.7rem 2rem;
+        display: inline-block;
+    }
+    
+    .nav-links.active .contact-btn:hover {
+        background: var(--secondary-color);
+        transform: translateY(-2px);
     }
 
     .hero-content h1 {

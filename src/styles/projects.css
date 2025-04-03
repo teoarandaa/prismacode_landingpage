@@ -2,6 +2,100 @@
 
 /* Reutilizamos las clases de hero de index.html */
 
+/* Estilos específicos para el hero de projects */
+.projects-hero {
+    height: 100vh;
+    min-height: 500px; /* Altura mínima para evitar que se comprima demasiado */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--primary-color);
+    width: 100vw; /* Asegurar que ocupe todo el ancho de la ventana */
+    max-width: 100%; /* Prevenir desbordamiento horizontal */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    right: 0;
+}
+
+.projects-hero .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw; /* Usar vw para ocupar todo el ancho de la ventana */
+    height: 100vh; /* Usar vh para ocupar todo el alto de la ventana */
+    z-index: 0;
+    background-image: linear-gradient(rgba(99, 102, 241, 0.9), rgba(79, 70, 229, 0.9)), url("../assets/9906016.jpg");
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    -webkit-transform: translate3d(0,0,0); /* Forzar aceleración por hardware para evitar problemas en Safari */
+    transform: translate3d(0,0,0);
+}
+
+.projects-hero .hero-content {
+    text-align: center;
+    z-index: 2;
+    padding: 2rem;
+    position: relative;
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    color: white;
+    box-sizing: border-box;
+}
+
+.projects-hero .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: white;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+}
+
+.projects-hero .hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+/* Ajustar .hero-features para asegurar buen espaciado en móviles */
+.projects-hero .hero-features {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+    padding: 0 1rem;
+}
+
+.projects-hero .hero-features span {
+    color: white;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0.3rem 0;
+}
+
+.projects-hero .hero-cta {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
 /* Projects section */
 .projects {
     padding: 6rem 2rem;
@@ -357,18 +451,6 @@
     }
 }
 
-@media (max-width: 768px) {
-    .tech-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 480px) {
-    .tech-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
 /* Responsive */
 @media (max-width: 992px) {
     .projects-grid {
@@ -378,11 +460,30 @@
 
 @media (max-width: 768px) {
     .projects-hero {
+        height: 100vh;
         padding-top: 80px; /* Espacio para el menú fijo */
+    }
+    
+    .projects-hero .hero-background {
+        width: 100vw;
+        height: 100vh;
+        background-position: center center !important;
+        background-size: cover !important;
+    }
+    
+    .projects-hero .hero-content {
+        padding: 1rem;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
     }
     
     .projects-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .tech-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
     
     .filter-container {
@@ -407,13 +508,11 @@
     }
     
     .projects-hero .hero-content h1 {
-        font-size: 1.8rem;
-        line-height: 1.2;
+        font-size: 2.2rem;
     }
     
     .projects-hero .hero-content p {
-        font-size: 0.85rem;
-        line-height: 1.4;
+        font-size: 1.1rem;
     }
     
     .projects-hero .hero-features {
@@ -430,6 +529,25 @@
 }
 
 @media (max-width: 576px) {
+    .projects-hero {
+        min-height: 100vh; /* Forzar altura mínima en móviles pequeños */
+    }
+    
+    .projects-hero .hero-background {
+        height: 100vh; /* Asegurar que ocupe toda la altura de la ventana */
+        width: 100vw; /* Asegurar que ocupe todo el ancho de la ventana */
+        background-position: center center !important;
+        background-size: cover !important;
+    }
+    
+    .projects-hero .hero-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .projects-hero .hero-content p {
+        font-size: 1rem;
+    }
+    
     .filter-btn {
         padding: 0.7rem 1.4rem;
         font-size: 0.95rem;
@@ -448,25 +566,49 @@
     .section-subtitle {
         font-size: 0.85rem;
     }
+}
+
+@media (max-width: 480px) {
+    .tech-grid {
+        grid-template-columns: 1fr;
+    }
     
+    .projects-hero .hero-background {
+        width: 100vw;
+        height: 100vh;
+        background-position: center center !important;
+        background-size: cover !important;
+    }
+}
+
+/* Añadir un breakpoint para móviles muy pequeños */
+@media (max-width: 375px) {
     .projects-hero .hero-content h1 {
         font-size: 1.5rem;
+        margin-bottom: 1rem;
     }
     
     .projects-hero .hero-content p {
-        font-size: 0.75rem;
-    }
-    
-    .projects-hero .hero-features {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 0.8rem;
-        margin-bottom: 1rem;
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
     }
     
     .projects-hero .hero-features span {
         font-size: 0.7rem;
+    }
+    
+    .cta-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .projects-hero .hero-background {
+        width: 100vw;
+        height: 100vh;
+        min-height: 100%; /* Asegurar que al menos ocupe todo el contenedor */
+        object-fit: cover; /* Para comportamiento similar a background-size: cover */
+        background-position: center center !important;
+        background-size: cover !important;
     }
 }
 
@@ -499,18 +641,9 @@
     background-color: transparent;
 }
 
-/* Actualizar la imagen de fondo para la sección hero-projects con un tamaño mayor */
-.projects-hero .hero-background {
-    background-image: linear-gradient(rgba(99, 102, 241, 0.8), rgba(79, 70, 229, 0.8)), url("../assets/9906016.jpg") !important;
-    background-size: 100% 100%, 40% !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-    z-index: 0;
-}
-
 /* Mantener el estilo actual pero asegurar que la nueva imagen se muestre correctamente */
 .projects-hero .hero-background::after {
-    content: none !important; /* Eliminar cualquier pseudo-elemento que pudiera estar interfiriendo */
+    content: none !important;
 }
 
 /* Eliminar todas las animaciones por nth-child */
@@ -520,30 +653,6 @@
 .project-card:nth-child(5),
 .project-card:nth-child(6) {
     animation-delay: 0s;
-}
-
-@media (max-width: 1200px) {
-    .projects-hero .hero-background {
-        background-size: 100% 100%, 65% !important;
-    }
-}
-
-@media (max-width: 992px) {
-    .projects-hero .hero-background {
-        background-size: 100% 100%, 70% !important;
-    }
-}
-
-@media (max-width: 768px) {
-    .projects-hero .hero-background {
-        background-size: 100% 100%, 80% !important;
-    }
-}
-
-@media (max-width: 576px) {
-    .projects-hero .hero-background {
-        background-size: 100% 100%, 85% !important;
-    }
 }
 
 /* Ocultar visualmente los breadcrumbs pero mantenerlos para SEO */
@@ -557,4 +666,11 @@
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* Prevenir desbordamiento horizontal en toda la página */
 }

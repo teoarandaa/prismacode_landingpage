@@ -6,6 +6,11 @@
     --accent-color: #c7d2fe;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px; /* Add padding for anchor links to account for fixed navbar */
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -713,7 +718,7 @@ body .navbar.transparent .contact-btn {
 }
 
 .contact {
-    padding: 6rem 2rem 4rem;
+    padding: 4rem 2rem 4rem;
     background: var(--accent-color);
     text-align: center;
     margin-bottom: 0;
@@ -732,7 +737,7 @@ body .navbar.transparent .contact-btn {
 
 .contact-content p {
     font-size: 1.2rem;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem;
     line-height: 1.6;
     color: var(--text-color);
 }

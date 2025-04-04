@@ -59,9 +59,24 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
+            
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+                // Añadir offset adicional para la sección de contacto
+                if (targetId === '#contact') {
+                    const navbarHeight = document.querySelector('.navbar').offsetHeight;
+                    const yOffset = -navbarHeight + 45; // Increased from +10 to +70 to position it higher
+                    const y = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                    
+                    window.scrollTo({top: y, behavior: 'smooth'});
+                } else {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            }
         });
     });
 

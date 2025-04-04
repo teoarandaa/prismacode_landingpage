@@ -6,6 +6,11 @@
     --accent-color: #c7d2fe;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px; /* Add padding for anchor links to account for fixed navbar */
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -78,7 +83,7 @@ body .navbar.transparent .hamburger span {
 body .navbar.transparent .contact-btn {
     background: white !important;
     color: var(--primary-color) !important;
-    font-weight: 600 !important;
+    font-weight: 700 !important;
 }
 
 .logo {
@@ -152,7 +157,7 @@ body .navbar.transparent .contact-btn {
     color: white !important;
     padding: 0.6rem 1.2rem;
     border-radius: 0.5rem;
-    font-weight: 600;
+    font-weight: 700 !important;
     box-shadow: 0 2px 10px rgba(99, 102, 241, 0.2);
     transition: all 0.3s ease;
 }
@@ -613,6 +618,7 @@ body .navbar.transparent .contact-btn {
         margin-top: 1rem;
         padding: 0.7rem 2rem;
         display: inline-block;
+        font-weight: 700 !important;
     }
     
     .nav-links.active .contact-btn:hover {
@@ -713,7 +719,7 @@ body .navbar.transparent .contact-btn {
 }
 
 .contact {
-    padding: 6rem 2rem 4rem;
+    padding: 4rem 2rem 4rem;
     background: var(--accent-color);
     text-align: center;
     margin-bottom: 0;
@@ -732,7 +738,7 @@ body .navbar.transparent .contact-btn {
 
 .contact-content p {
     font-size: 1.2rem;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem;
     line-height: 1.6;
     color: var(--text-color);
 }

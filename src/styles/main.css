@@ -713,9 +713,10 @@ body .navbar.transparent .contact-btn {
 }
 
 .contact {
-    padding: 6rem 2rem;
+    padding: 6rem 2rem 4rem;
     background: var(--accent-color);
     text-align: center;
+    margin-bottom: 0;
 }
 
 .contact-content {
@@ -764,7 +765,7 @@ footer {
     background-color: #1a1a2e;
     color: #fff;
     padding: 4rem 2rem 2rem;
-    margin-top: 2rem;
+    margin-top: 0;
     width: 100%;
     box-sizing: border-box;
 }

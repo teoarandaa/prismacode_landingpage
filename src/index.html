@@ -532,10 +532,27 @@
         <div class="contact-content" data-aos="fade-up">
             <h2>¿Listo para transformar tu negocio?</h2>
             <p>Cuéntanos tu proyecto y construyamos juntos el futuro digital de tu empresa</p>
-            <a href="mailto:contact@prismadevbackoffice.com?subject=Consulta%20sobre%20proyecto%20digital&body=Hola%20equipo%20de%20Prisma%2C%0A%0AMe%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios.%0A%0ATipo%20de%20proyecto%3A%0APresupuesto%20estimado%3A%0APlazos%20deseados%3A%0A%0A¡Gracias!" 
-               class="contact-btn" data-aos="fade-up" data-aos-delay="200">
-                Hablemos
-            </a>
+            
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Tu email" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="subject" name="subject" placeholder="Asunto" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" placeholder="Tu mensaje" rows="5" required></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="contact-btn" data-aos="fade-up" data-aos-delay="200">
+                        Enviar mensaje
+                    </button>
+                </div>
+                <div id="form-status" class="form-status"></div>
+            </form>
         </div>
     </section>
 
@@ -726,6 +743,10 @@
     <script src="js/main.js"></script>
     <script src="js/animations.js"></script>
     <script src="js/modals.js"></script>
+    
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="js/contact.js"></script>
     
     <!-- Schema.org para la organización -->
     <script type="application/ld+json">

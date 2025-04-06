@@ -8,26 +8,76 @@ document.addEventListener('DOMContentLoaded', () => {
         disable: false
     });
 
+    // NAVBAR TRANSPARENTE
+    const navbar = document.querySelector('.navbar');
+    const heroSection = document.querySelector('#home');
+    
+    // Función para manejar el estilo del navbar
+    function handleNavbarTransparency() {
+        if (!heroSection) return;
+        
+        // Si estamos en la sección hero (cualquier parte visible)
+        const heroRect = heroSection.getBoundingClientRect();
+        if (heroRect.bottom > 0 && heroRect.top < window.innerHeight) {
+            navbar.classList.add('transparent');
+            // Forzar los estilos transparentes
+            navbar.style.background = 'transparent';
+            navbar.style.backdropFilter = 'none';
+            navbar.style.webkitBackdropFilter = 'none';
+            navbar.style.boxShadow = 'none';
+        } else {
+            navbar.classList.remove('transparent');
+            // Restaurar estilos por defecto desde CSS
+            navbar.style.background = '';
+            navbar.style.backdropFilter = '';
+            navbar.style.webkitBackdropFilter = '';
+            navbar.style.boxShadow = '';
+        }
+    }
+    
+    // Asegurar que el navbar es transparente al inicio
+    if (heroSection) {
+        navbar.classList.add('transparent');
+    }
+    
+    // Actualizar al hacer scroll
+    window.addEventListener('scroll', handleNavbarTransparency);
+    
+    // Actualizar al redimensionar
+    window.addEventListener('resize', handleNavbarTransparency);
+    
+    // Verificar cuando todo el contenido se haya cargado
+    window.addEventListener('load', () => {
+        // Forzar la transparencia si estamos al inicio
+        if (heroSection && window.scrollY === 0) {
+            navbar.classList.add('transparent');
+        }
+        handleNavbarTransparency();
+    });
+
     // Smooth scroll para los enlaces de navegación
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
+            
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+                // Añadir offset adicional para la sección de contacto
+                if (targetId === '#contact') {
+                    const navbarHeight = document.querySelector('.navbar').offsetHeight;
+                    const yOffset = -navbarHeight + 45; // Increased from +10 to +70 to position it higher
+                    const y = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                    
+                    window.scrollTo({top: y, behavior: 'smooth'});
+                } else {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            }
         });
-    });
-
-    // Cambiar estilo del navbar al hacer scroll
-    window.addEventListener('scroll', () => {
-        const navbar = document.querySelector('.navbar');
-        if (window.scrollY > 100) {
-            navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-            navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-        } else {
-            navbar.style.background = 'rgba(255, 255, 255, 0.9)';
-            navbar.style.boxShadow = 'none';
-        }
     });
 
     // Manejo de tech-cards

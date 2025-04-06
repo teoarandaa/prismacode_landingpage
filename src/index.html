@@ -28,6 +28,12 @@
     <meta property="og:image:height" content="630">
     <meta property="og:locale" content="es_ES">
     <meta property="og:site_name" content="Prisma Developments">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="https://prismadev.com/assets/logo.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="https://prismadev.com/assets/logo.png">
+    <link rel="apple-touch-icon" href="https://prismadev.com/assets/logo.png">
+    <meta name="theme-color" content="#ffffff">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
@@ -35,7 +41,7 @@
     <meta property="twitter:title" content="Prisma Developments | Desarrollo Web y Aplicaciones Móviles">
     <meta property="twitter:description" content="Expertos en desarrollo web, aplicaciones móviles y soluciones digitales personalizadas para empresas.">
     <meta property="twitter:image" content="https://prismadev.com/assets/logo.png">
-    <meta name="twitter:creator" content="@PrismaDevs">
+    <meta name="twitter:creator" content="@WeArePrismaDev">
     
     <!-- Favicon optimizado para diferentes navegadores -->
     <link rel="icon" type="image/png" href="assets/logo.png">
@@ -85,7 +91,7 @@
     <link rel="preload" href="styles/main.css" as="style">
 </head>
 <body>
-    <nav class="navbar">
+    <nav class="navbar transparent" style="background: transparent !important; backdrop-filter: none !important; -webkit-backdrop-filter: none !important; box-shadow: none !important;">
         <div class="logo">
             <img src="assets/logo.png" alt="Logo de Prisma Developments" width="50" height="50" loading="lazy">
         </div>
@@ -99,12 +105,17 @@
             <a href="index.html#home" title="Inicio - Prisma Desarrollo Web">Inicio</a>
             <a href="projects.html" title="Portafolio de proyectos de desarrollo">Proyectos</a>
             <a href="index.html#pricing" title="Precios de servicios de desarrollo">Precios</a>
-            <a href="mailto:contact@prismadevbackoffice.com" class="contact-btn" title="Contactar con Prisma">Contactar</a>
+            <a href="#contact" class="contact-btn" title="Contactar con Prisma">Contactar</a>
         </div>
     </nav>
 
     <section id="home" class="hero">
-        <div class="hero-background" aria-label="Fondo decorativo de la página principal"></div>
+        <div class="video-container">
+            <video autoplay muted loop playsinline aria-label="Video de fondo">
+                <source src="assets/video_new.mp4" type="video/mp4">
+            </video>
+            <div class="overlay" aria-label="Fondo decorativo de la página principal"></div>
+        </div>
         <div class="hero-content">
             <h1 data-aos="fade-up" data-aos-delay="100">Soluciones digitales para impulsar tu negocio</h1>
             <p data-aos="fade-up" data-aos-delay="200">Creamos aplicaciones y sistemas personalizados que automatizan procesos, mejoran la experiencia de tus clientes y potencian el crecimiento de tu negocio. Nuestras soluciones tecnológicas están diseñadas para adaptarse perfectamente a tus necesidades específicas.</p>
@@ -200,12 +211,12 @@
                     <div class="feature"><i class="fas fa-check"></i> Diseño personalizado</div>
                     <div class="feature"><i class="fas fa-check"></i> Responsive (móvil y escritorio)</div>
                     <div class="feature"><i class="fas fa-check"></i> E-commerce disponible</div>
-                    <div class="feature"><i class="fas fa-check"></i> Soporte básico continuo</div>
+                    <div class="feature"><i class="fas fa-check"></i> Soporte básico continuo el 1r año</div>
                     <div class="feature"><i class="fas fa-check"></i> Diseño, creación y deploy incluidos</div>
                     <div class="feature tooltip-container">
                         <i class="fas fa-info-circle info-icon"></i> Dominios personalizados (consultar condiciones)
                         <div class="tooltip">
-                            El dominio se incluye con el Soporte Premium. Se requiere contratar Soporte Premium para que gestionemos la renovación y mantenimiento del dominio, sino es responsabilidad del cliente.
+                            El dominio se incluye con el Soporte Continuo. Se requiere contratar Soporte Continuo para que gestionemos la renovación y mantenimiento del dominio, sino es responsabilidad del cliente.
                         </div>
                     </div>
                 </div>
@@ -213,39 +224,39 @@
                     <a href="mailto:contact@prismadevbackoffice.com?subject=Consulta%20sobre%20Desarrollo%20Web&body=Hola%20equipo%20de%20Prisma%2C%0A%0AMe%20interesa%20el%20desarrollo%20de%20una%20web.%20Me%20gustaría%20obtener%20más%20información.%0A%0ATipo%20de%20proyecto%3A%0A¿Incluye%20e-commerce%3F%3A%0APlazos%20deseados%3A%0A%0A¡Gracias!" class="pricing-btn">Solicitar presupuesto</a>
                 </div>
             </div>
-            
-            <div class="pricing-card" data-aos="fade-up" data-aos-delay="500">
+
+            <div class="pricing-card" data-aos="fade-up" data-aos-delay="900">
                 <div class="pricing-header">
-                    <h3>Desarrollo de Apps</h3>
+                    <h3>Personalizado</h3>
                     <div class="price">
-                        <span class="amount">Desde 500€</span>
-                        <span class="period">Proyecto único</span>
+                        <span class="amount">A medida</span>
+                        <span class="period">Según necesidades</span>
                     </div>
                 </div>
                 <div class="pricing-features">
-                    <div class="feature"><i class="fas fa-check"></i> Diseño UX/UI personalizado</div>
-                    <div class="feature"><i class="fas fa-check"></i> Aplicaciones iOS, Android y Web</div>
-                    <div class="feature"><i class="fas fa-check"></i> Funcionalidades a medida</div>
-                    <div class="feature"><i class="fas fa-check"></i> Soporte básico continuo</div>
-                    <div class="feature"><i class="fas fa-check"></i> Creación y deploy incluidos</div>
-                    <div class="feature"><i class="fas fa-check"></i> Publicación en tiendas de apps</div>
+                    <div class="feature"><i class="fas fa-check"></i> Soluciones a medida</div>
+                    <div class="feature"><i class="fas fa-check"></i> Proyectos complejos</div>
+                    <div class="feature"><i class="fas fa-check"></i> Integraciones avanzadas</div>
+                    <div class="feature"><i class="fas fa-check"></i> Consultoría tecnológica</div>
+                    <div class="feature"><i class="fas fa-check"></i> Desarrollo a gran escala</div>
+                    <div class="feature"><i class="fas fa-check"></i> Presupuesto personalizado</div>
                 </div>
                 <div class="pricing-footer">
-                    <a href="mailto:contact@prismadevbackoffice.com?subject=Consulta%20sobre%20Desarrollo%20de%20Apps&body=Hola%20equipo%20de%20Prisma%2C%0A%0AMe%20interesa%20el%20desarrollo%20de%20una%20aplicación%20móvil.%20Me%20gustaría%20obtener%20más%20información.%0A%0ATipo%20de%20app%3A%0APlataformas%20(iOS/Android)%3A%0APlazos%20deseados%3A%0A%0A¡Gracias!" class="pricing-btn">Solicitar presupuesto</a>
+                    <a href="mailto:contact@prismadevbackoffice.com?subject=Consulta%20sobre%20Proyecto%20Personalizado&body=Hola%20equipo%20de%20Prisma%2C%0A%0AMe%20interesa%20un%20desarrollo%20personalizado.%20Me%20gustaría%20obtener%20más%20información.%0A%0ADescripción%20del%20proyecto%3A%0ARequisitos%20especiales%3A%0APlazos%20deseados%3A%0A%0A¡Gracias!" class="pricing-btn">Solicitar información</a>
                 </div>
             </div>
             
             <div class="pricing-card featured" data-aos="fade-up" data-aos-delay="700">
                 <div class="pricing-badge">Recomendado</div>
                 <div class="pricing-header">
-                    <h3>Soporte Premium</h3>
+                    <h3>Soporte Continuo</h3>
                     <div class="price">
-                        <span class="amount">50€</span>
+                        <span class="amount">384€</span>
                         <span class="period">/ mes</span>
                     </div>
                 </div>
                 <div class="pricing-features">
-                    <div class="feature"><i class="fas fa-check"></i> Actualizaciones periódicas</div>
+                    <div class="feature"><i class="fas fa-check"></i> Actualizaciones menores</div>
                     <div class="feature"><i class="fas fa-check"></i> Prioridad de atención</div>
                     <div class="feature"><i class="fas fa-check"></i> Solución rápida de errores</div>
                     <div class="feature"><i class="fas fa-check"></i> Soporte continuo mejorado</div>
@@ -259,7 +270,7 @@
         </div>
         
         <div class="pricing-note" data-aos="fade-up" data-aos-delay="300">
-            <p>Todos los precios son orientativos. <a href="mailto:contact@prismadevbackoffice.com?subject=Solicitud%20de%20Presupuesto%20Personalizado&body=Hola%20equipo%20de%20Prisma%2C%0A%0AMe%20gustar%C3%ADa%20solicitar%20un%20presupuesto%20personalizado%20para%20mi%20proyecto.%0A%0ATipo%20de%20proyecto%3A%0ADescripci%C3%B3n%20breve%3A%0APresupuesto%20estimado%3A%0APlazos%20deseados%3A%0A%0A¡Gracias!">Contáctanos</a> para un presupuesto personalizado según tus necesidades específicas.</p>
+            <p><a href="mailto:contact@prismadevbackoffice.com?subject=Solicitud%20de%20Presupuesto%20Personalizado&body=Hola%20equipo%20de%20Prisma%2C%0A%0AMe%20gustar%C3%ADa%20solicitar%20un%20presupuesto%20personalizado%20para%20mi%20proyecto.%0A%0ATipo%20de%20proyecto%3A%0ADescripci%C3%B3n%20breve%3A%0APresupuesto%20estimado%3A%0APlazos%20deseados%3A%0A%0A¡Gracias!">Contáctanos</a> para un presupuesto personalizado según tus necesidades específicas.</p>
         </div>
     </section>
 
@@ -331,7 +342,7 @@
             <div class="tech-card" data-aos="zoom-in" data-aos-delay="600">
                 <div class="tech-card-inner">
                     <div class="tech-card-front">
-                        <i class="fab fa-android" aria-hidden="true"></i>
+                        <img src="assets/kotlin.png" alt="Kotlin logo" class="tech-logo">
                         <h3>Kotlin</h3>
                     </div>
                     <div class="tech-card-back">
@@ -358,7 +369,7 @@
                 <div class="tech-card-inner">
                     <div class="tech-card-front">
                         <svg class="nextjs-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="42" height="42" aria-label="Logo de Next.js" role="img">
-                            <path d="M11.572 0c-.176 0-.31.001-.358.007a19.76 19.76 0 0 0-.364.033C7.443.346 4.25 2.185 2.228 5.012a11.875 11.875 0 0 0-2.119 5.243c-.096.659-.108.854-.108 1.747s.012 1.089.108 1.748c.652 4.506 3.86 8.292 8.209 9.695.779.25 1.6.422 2.534.525.363.04 1.935.04 2.299 0 1.611-.178 2.977-.577 4.323-1.264.207-.106.247-.134.219-.158-.02-.013-.9-1.193-1.955-2.62l-1.919-2.592-2.404-3.558a338.739 338.739 0 0 0-2.422-3.556c-.009-.002-.018 1.579-.023 3.51-.007 3.38-.01 3.515-.052 3.595a.426.426 0 0 1-.206.214c-.075.037-.14.044-.495.044H7.81l-.108-.068a.438.438 0 0 1-.157-.171l-.05-.106.006-4.703.007-4.705.072-.092a.645.645 0 0 1 .174-.143c.096-.047.134-.051.54-.051.478 0 .558.018.682.154.035.038 1.337 1.999 2.895 4.361a10760.433 10760.433 0 0 0 4.735 7.17l1.9 2.879.096-.063a12.317 12.317 0 0 0 2.466-2.163 11.944 11.944 0 0 0 2.824-6.134c.096-.66.108-.854.108-1.748 0-.893-.012-1.088-.108-1.747-.652-4.506-3.859-8.292-8.208-9.695a12.597 12.597 0 0 0-2.499-.523A33.119 33.119 0 0 0 11.573 0zm4.069 7.217c.347 0 .408.005.486.047a.473.473 0 0 1 .237.277c.018.06.023 1.365.018 4.304l-.006 4.218-.744-1.14-.746-1.14v-3.066c0-1.982.01-3.097.023-3.15a.478.478 0 0 1 .233-.296c.096-.05.13-.054.5-.054z"/>
+                            <path d="M11.572 0c-.176 0-.31.001-.358.007a19.76 19.76 0 0 0-.364.033C7.443.346 4.25 2.185 2.228 5.012a11.875 11.875 0 0 0-2.119 5.243c-.096.659-.108.854-.108 1.747s.012 1.089.108 1.748c.652 4.506 3.86 8.292 8.209 9.695.779.25 1.6.422 2.534.525.363.04 1.935.04 2.299 0 1.611-.178 2.977-.577 4.323-1.264.207-.106.247-.134.219-.158-.02-.013-.9-1.193-1.955-2.62l-1.919-2.592-2.404-3.558a338.739 338.739 0 0 0-2.422-3.556c-.009-.002-.018 1.579-.023 3.51-.007 3.38-.01 3.515-.052 3.595a.426.426 0 0 1-.206.214c-.075.037-.14.044-.495.044H7.81l-.108-.068a.438.438 0 0 1-.157-.171l-.05-.106.006-4.703.007-4.705.072-.092a.645.645 0 0 1 .174-.143c.096-.047.134-.051.5-.051.478 0 .558.018.682.154.035.038 1.337 1.999 2.895 4.361a10760.433 10760.433 0 0 0 4.735 7.17l1.9 2.879.096-.063a12.317 12.317 0 0 0 2.466-2.163 11.944 11.944 0 0 0 2.824-6.134c.096-.66.108-.854.108-1.748 0-.893-.012-1.088-.108-1.747-.652-4.506-3.859-8.292-8.208-9.695a12.597 12.597 0 0 0-2.499-.523A33.119 33.119 0 0 0 11.573 0zm4.069 7.217c.347 0 .408.005.486.047a.473.473 0 0 1 .237.277c.018.06.023 1.365.018 4.304l-.006 4.218-.744-1.14-.746-1.14v-3.066c0-1.982.01-3.097.023-3.15a.478.478 0 0 1 .233-.296c.096-.05.13-.054.5-.054z"/>
                         </svg>
                         <h3>Next.js</h3>
                     </div>
@@ -382,6 +393,138 @@
                     </div>
                 </div>
             </div>
+            <div class="tech-card" data-aos="zoom-in" data-aos-delay="1000">
+                <div class="tech-card-inner">
+                    <div class="tech-card-front">
+                        <img src="assets/plsql.svg" alt="PL/SQL logo" class="tech-logo">
+                        <h3>PL/SQL</h3>
+                    </div>
+                    <div class="tech-card-back">
+                        <h4>PL/SQL</h4>
+                        <p>Lenguaje de programación de Oracle que combina SQL con características procedurales, permitiendo crear aplicaciones robustas y eficientes para bases de datos empresariales.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="tech-card" data-aos="zoom-in" data-aos-delay="1100">
+                <div class="tech-card-inner">
+                    <div class="tech-card-front">
+                        <img src="assets/python.webp" alt="Python logo" class="tech-logo">
+                        <h3>Python</h3>
+                    </div>
+                    <div class="tech-card-back">
+                        <h4>Python</h4>
+                        <p>Lenguaje versátil y potente, ideal para desarrollo web, ciencia de datos, IA y automatización. Destaca por su simplicidad y legibilidad.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="tech-card" data-aos="zoom-in" data-aos-delay="1200">
+                <div class="tech-card-inner">
+                    <div class="tech-card-front">
+                        <img src="assets/bash.png" alt="Bash logo" class="tech-logo">
+                        <h3>Bash</h3>
+                    </div>
+                    <div class="tech-card-back">
+                        <h4>Bash</h4>
+                        <p>Shell script para automatización y administración de sistemas Unix/Linux, permitiendo control eficiente del sistema operativo.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="tech-card" data-aos="zoom-in" data-aos-delay="1300">
+                <div class="tech-card-inner">
+                    <div class="tech-card-front">
+                        <img src="assets/php.png" alt="PHP logo" class="tech-logo">
+                        <h3>PHP</h3>
+                    </div>
+                    <div class="tech-card-back">
+                        <h4>PHP</h4>
+                        <p>Lenguaje de programación especialmente adecuado para desarrollo web y creación de aplicaciones dinámicas del lado del servidor.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="tech-card" data-aos="zoom-in" data-aos-delay="1400">
+                <div class="tech-card-inner">
+                    <div class="tech-card-front">
+                        <img src="assets/mongodb.svg" alt="MongoDB logo" class="tech-logo">
+                        <h3>MongoDB</h3>
+                    </div>
+                    <div class="tech-card-back">
+                        <h4>MongoDB</h4>
+                        <p>Base de datos NoSQL flexible y escalable, perfecta para aplicaciones modernas que requieren manejo de grandes volúmenes de datos.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="tech-card" data-aos="zoom-in" data-aos-delay="1500">
+                <div class="tech-card-inner">
+                    <div class="tech-card-front">
+                        <img src="assets/mysql.png" alt="MySQL logo" class="tech-logo">
+                        <h3>MySQL</h3>
+                    </div>
+                    <div class="tech-card-back">
+                        <h4>MySQL</h4>
+                        <p>Sistema de gestión de bases de datos relacional más popular, conocido por su fiabilidad y facilidad de uso.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="tech-card" data-aos="zoom-in" data-aos-delay="1600">
+                <div class="tech-card-inner">
+                    <div class="tech-card-front">
+                        <img src="assets/postgresql.png" alt="PostgreSQL logo" class="tech-logo">
+                        <h3>PostgreSQL</h3>
+                    </div>
+                    <div class="tech-card-back">
+                        <h4>PostgreSQL</h4>
+                        <p>Sistema de base de datos relacional avanzado con características empresariales y excelente rendimiento para datos complejos.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="tech-card" data-aos="zoom-in" data-aos-delay="1700">
+                <div class="tech-card-inner">
+                    <div class="tech-card-front">
+                        <img src="assets/lua.png" alt="Lua logo" class="tech-logo">
+                        <h3>Lua</h3>
+                    </div>
+                    <div class="tech-card-back">
+                        <h4>Lua</h4>
+                        <p>Lenguaje ligero y embebible, ideal para scripting y desarrollo de juegos, conocido por su eficiencia y flexibilidad.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="tech-card" data-aos="zoom-in" data-aos-delay="1800">
+                <div class="tech-card-inner">
+                    <div class="tech-card-front">
+                        <img src="assets/csharp.svg" alt="C# logo" class="tech-logo">
+                        <h3>C#</h3>
+                    </div>
+                    <div class="tech-card-back">
+                        <h4>C#</h4>
+                        <p>Lenguaje versátil de Microsoft para desarrollo de aplicaciones Windows, web y juegos con .NET Framework.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="tech-card" data-aos="zoom-in" data-aos-delay="1900">
+                <div class="tech-card-inner">
+                    <div class="tech-card-front">
+                        <img src="assets/java.png" alt="Java logo" class="tech-logo">
+                        <h3>Java</h3>
+                    </div>
+                    <div class="tech-card-back">
+                        <h4>Java</h4>
+                        <p>Lenguaje multiplataforma orientado a objetos, ideal para desarrollo empresarial y aplicaciones robustas.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="tech-card" data-aos="zoom-in" data-aos-delay="2000">
+                <div class="tech-card-inner">
+                    <div class="tech-card-front">
+                        <img src="assets/java.png" alt="JavaFX logo" class="tech-logo">
+                        <h3>JavaFX</h3>
+                    </div>
+                    <div class="tech-card-back">
+                        <h4>JavaFX</h4>
+                        <p>Framework para crear aplicaciones de escritorio modernas y ricas en interfaz gráfica usando Java.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -389,17 +532,94 @@
         <div class="contact-content" data-aos="fade-up">
             <h2>¿Listo para transformar tu negocio?</h2>
             <p>Cuéntanos tu proyecto y construyamos juntos el futuro digital de tu empresa</p>
-            <a href="mailto:contact@prismadevbackoffice.com?subject=Consulta%20sobre%20proyecto%20digital&body=Hola%20equipo%20de%20Prisma%2C%0A%0AMe%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios.%0A%0ATipo%20de%20proyecto%3A%0APresupuesto%20estimado%3A%0APlazos%20deseados%3A%0A%0A¡Gracias!" 
-               class="contact-btn" data-aos="fade-up" data-aos-delay="200">
-                Hablemos
-            </a>
+            
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Tu email" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="subject" name="subject" placeholder="Asunto" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" placeholder="Tu mensaje" rows="5" required></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="contact-btn" data-aos="fade-up" data-aos-delay="200">
+                        Enviar mensaje
+                    </button>
+                </div>
+                <div id="form-status" class="form-status"></div>
+            </form>
         </div>
     </section>
 
     <footer>
-        <div class="footer-content">
-            <div class="footer-logo">PRISMA</div>
-            <div class="footer-links">
+        <div class="footer-container">
+            <div class="footer-column">
+                <div class="footer-logo-section">
+                    <img src="assets/logo.png" alt="Logo de Prisma Developments">
+                    <h3>Prisma Developments</h3>
+                </div>
+                <p>Soluciones digitales personalizadas que impulsan la transformación y el crecimiento de tu negocio.</p>
+                <div class="footer-social">
+                    <a href="https://x.com/WeArePrismaDev" target="_blank" aria-label="X (anteriormente Twitter)"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://www.linkedin.com/company/prisma-developments/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Servicios</h3>
+                <div class="footer-links">
+                    <a href="index.html#pricing">Desarrollo Web</a>
+                    <a href="index.html#pricing">Aplicaciones Móviles</a>
+                    <a href="index.html#pricing">Consultoría Digital</a>
+                    <a href="index.html#pricing">Soporte Continuo</a>
+                    <a href="index.html#pricing">Personalizado</a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Enlaces Rápidos</h3>
+                <div class="footer-links">
+                    <a href="index.html#home">Inicio</a>
+                    <a href="projects.html">Proyectos</a>
+                    <a href="index.html#technologies">Tecnologías</a>
+                    <a href="index.html#benefits">Beneficios</a>
+                    <a href="index.html#approach">Nuestro Enfoque</a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Contacto</h3>
+                <div class="footer-contact-info">
+                    <div class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span><a href="mailto:contact@prismadevbackoffice.com">contact@prismadevbackoffice.com</a></span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+34 671 659 880</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Barcelona, España</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Lun - Dom: 8:00 - 00:00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="footer-copyright">
+                Prisma Developments
+            </div>
+            <div class="footer-bottom-links">
                 <a href="privacy.html">Política de Privacidad</a>
                 <a href="terms.html">Términos de Uso</a>
                 <a href="mailto:contact@prismadevbackoffice.com?subject=Consulta%20sobre%20servicios%20digitales&body=Hola%20equipo%20de%20Prisma%2C%0A%0AMe%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios.%0A%0A¡Gracias!">Contacto</a>
@@ -524,6 +744,11 @@
     <script src="js/animations.js"></script>
     <script src="js/modals.js"></script>
     
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/faq.js"></script>
+    
     <!-- Schema.org para la organización -->
     <script type="application/ld+json">
     {
@@ -556,8 +781,7 @@
           "longitude": -3.74922
         },
         "geoRadius": "5000"
-      },
-      "logo": "https://prismadev.com/assets/logo.png"
+      }
     }
     </script>
     
@@ -641,5 +865,15 @@
       ]
     }
     </script>
+    
+    <!-- FAQ Button -->
+    <button class="faq-button" id="faqButton">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+        <path
+          d="M80 160c0-35.3 28.7-64 64-64h32c35.3 0 64 28.7 64 64v3.6c0 21.8-11.1 42.1-29.4 53.8l-42.2 27.1c-25.2 16.2-40.4 44.1-40.4 74V320c0 17.7 14.3 32 32 32s32-14.3 32-32v-1.4c0-8.2 4.2-15.8 11-20.2l42.2-27.1c36.6-23.6 58.8-64.1 58.8-107.7V160c0-70.7-57.3-128-128-128H144C73.3 32 16 89.3 16 160c0 17.7 14.3 32 32 32s32-14.3 32-32zm80 320a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"
+        ></path>
+      </svg>
+      <span class="faq-tooltip">FAQ</span>
+    </button>
 </body>
 </html> 

@@ -14,7 +14,7 @@
             "description": "Página de evento del juego Second Life dedicado a la temática gótica. Diseñado para ofrecer una experiencia inmersiva centrada en la venta de elementos dentro del juego. Incluye galería de productos y sistema de reservas.",
             "image": "assets/sabbath_logo.png",
             "categories": "web,design",
-            "tags": ["Web", "Diseño UX/UI", "E-commerce", "Experiencia Inmersiva"],
+            "tags": ["Web", "Diseño UX/UI", "Experiencia Inmersiva"],
             "url": "https://sabbathsl.com",
             "alt": "Sabbath - Plataforma de eventos góticos para Second Life con tienda virtual"
         },
@@ -26,6 +26,33 @@
             "tags": ["Web", "Diseño UX/UI", "Sistema de Gestión", "Comunidad Gaming"],
             "url": "https://lssd.netlify.app",
             "alt": "LSSD - Portal oficial del departamento de seguridad de Los Santos en GTA V"
+        },
+        {
+            "title": "Portafolio de Proyectos",
+            "description": "Portafolio personal de desarrollador de software apasionado por la creación de soluciones digitales innovadoras. Presenta una colección de proyectos que abarcan desarrollo web, aplicaciones móviles y herramientas de automatización. Incluye detalles sobre experiencia, tecnologías utilizadas y formas de contacto.",
+            "image": "assets/logo_marcfernandez.jpeg",
+            "categories": "web,design",
+            "tags": ["Web", "Diseño UX/UI", "Portafolio"],
+            "url": "https://marcausente.netlify.app",
+            "alt": "Portafolio de Proyectos de desarrollador de software"
+        },
+        {
+            "title": "Portafolio de Proyectos",
+            "description": "Portafolio interactivo de proyectos de desarrollo, diseñado para mostrar creatividad y habilidades técnicas. Explora una colección de aplicaciones, sitios web y herramientas innovadoras, con demostraciones en vivo, código fuente y detalles sobre las tecnologías utilizadas.",
+            "image": "assets/logo_teoarandaadev.png",
+            "categories": "web,design",
+            "tags": ["Web", "Diseño UX/UI", "Portafolio"],
+            "url": "https://teoarandaadev.vercel.app",
+            "alt": "Portafolio de Proyectos de desarrollador de software"
+        },
+        {
+            "title": "Portafolio de Proyectos",
+            "description": "Portafolio digital de arquitectura contemporánea, donde el diseño y la innovación se encuentran. Explora una selección de proyectos que combinan estética, funcionalidad y sostenibilidad, con visualizaciones en 3D, planos detallados y conceptos creativos que redefinen el espacio.",
+            "image": "assets/logo_alexcandela.png",
+            "categories": "web,design",
+            "tags": ["Web", "Diseño UX/UI", "Portafolio"],
+            "url": "https://alexcandelafernandez.netlify.app",
+            "alt": "Portafolio de Proyectos de arquitecto"
         }
     ]
 } 
